@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type"content="text/html; charset=GBK" />
+<title>无标题文档</title>
+<style type="text/css">
+.total{
+float:left;
+margin_left:20px;
+margin_left:20px;margin-top:0px;}
+#report_total
+}
+border:none;
+}
+table
+{border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: #0000FF;
+border-right-color: #0000FF;
+border-bottom-color: #0000FF;
+border-left-color: #0000FF;}
+</style>
+</head>
+<body>
+<div id="report_title">
+<div align="center">测试报告</div>
+</div>
+<div id="report_total">
+<div style="font-size:20px;font-weight:bold">测试结果汇总</div>
+<table width="900" border="1" cellspacing="0"  cellpadding="0" bordercolor="#000000">
+<tr>
+<td width="84"><div align="center">用例总数</div></td>
+<td width="152"><div align="center">通过数（pass）</div></td>
+<td width="125"><div align="center">失败数(failed)</div></td>
+<td width="96"><div align="center">跳过数(skip)</div></td>
+<td width="91"><div align="center">通过率</div></td>
+</tr>
+ <tr>
+<td><div align="center">6</div></td>
+<td><div align="center">0</div></td>
+ <td><div align="center">6</div></td>
+<td><div align="center">0</div></td>
+<td><div align="center">0.0%</div></td>
+</tr>
+</table>
+<div style="font-size:20px;font-weight:bold">详细测试结果</div>
+<table width="900" border="1" cellspacing="0"  cellpadding="0" bordercolor="#000000" style="color:green">
+<tr>
+<tr>
+<td colspan=5 align="left" style="color:green;font-size:14px;font-weight:bold">成功测试用例</td>
+</tr>
+<td width="440">用例名称</td>
+<td width="155">类名.方法名</td>
+<td width="134">开始时间</td>
+<td width="87">耗时</td>
+<td width="84">测试结果</td>
+<tr>
+
+</table>
+<table width="900" border="1" cellspacing="0" cellpadding="0" bordercolor="#000000" style="color:red;margin-top:10px">
+<tr>
+<tr>
+<td colspan=5 align="left" style="color:red;font-size:14px;font-weight:bold">成功测试用例</td>
+</tr>
+<td width="440">用例名称</td>
+<td width="155">类名.方法名</td>
+<td width="134">开始时间</td>
+<td width="87">耗时</td>
+<td width="84">测试结果</td>
+<tr>
+<tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.LoginuiattEmailCase</td>
+ <td width="134">2015-12-22 15:15:47</td>
+ <td width="87">49.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.LoginuiattEmailCase</td>
+ <td width="134">2015-12-22 15:15:47</td>
+ <td width="87">18.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.LoginuiattEmailCase</td>
+ <td width="134">2015-12-22 15:15:47</td>
+ <td width="87">645.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.ForgetPWEmailCase</td>
+ <td width="134">2015-12-22 15:15:57</td>
+ <td width="87">38.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.ForgetPWEmailCase</td>
+ <td width="134">2015-12-22 15:15:57</td>
+ <td width="87">20.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+
+<tr><td width="440">null</td>
+ <td width="155">com.uiatt.cases.ForgetPWEmailCase</td>
+ <td width="134">2015-12-22 15:15:57</td>
+ <td width="87">616.0毫秒</td>
+<td width="84">Failed</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

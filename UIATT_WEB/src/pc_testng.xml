@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="2"  configfailurepolicy="continue" 
+    time-out="300000" skipfailedinvocationcounts="true" preserve-order="true" > 
+	<parameter name="GLOBAL_PASSWORD" value="12345678" />
+	<parameter name="GLOBAL_VALIDCODE" value="d8kswa" />
+	<parameter name="LOGIN_EMAIL_USER" value="xyypg7003@163.com" />
+	<parameter name="LOGIN_PHONE_USER" value="17700080001" />
+	<parameter name="LOGIN_CAOS_EMAIL_USER" value="xyypg7002@163.com" />
+	<parameter name="LOGIN_CAOS_PHONE_USER" value="17700080002" />
+	<listeners>
+		<listener class-name="com.uiatt.listener.ScreenShotPC" />
+	</listeners>
+	<test name="case01-邮箱账户|登录-登出" enabled="true" > 
+		<classes>
+			<class name="com.uiatt.cases.LoginAllinEmailCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case02-手机账户|登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.LoginAllinPhoneCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case03-CAOS邮箱账户|登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.LoginCAOSEmailCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case04-CAOS邮箱账户|登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.LoginCAOSPhoneCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case05-邮箱账户|注册-暂不认证-登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.RegEmailSkipAuthCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case06-手机账户|注册-暂不认证-登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.RegPhoneSkipAuthCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case07-邮箱账户|注册-完成认证-跳过微信关注页-登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.RegEmailDoneAuthCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case08-手机账户|注册-完成认证-跳过微信关注页-登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.RegPhoneDoneAuthCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case09-邮箱账户|忘记密码-重置密码-用修改后的密码登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.ForgetPWEmailCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case10-手机账户|忘记密码-重置密码-用修改后的密码登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.ForgetPWPhoneCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case11-邮箱账户|修改为新密码-登录-登出-还原为全局密码" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.UpdatePWCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case12-未登录情况下对病例终端页的操作的权限判断以及登陆后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotLoginSickCaseAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case13-未登录情况下对文库终端页的操作的权限判断以及登陆后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotLoginDocumentAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case14-未登录情况下对话题终端页的操作的权限判断以及登陆后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotLoginTopicAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case15-未认证情况下对文库终端页的操作的权限判断以及认证后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotAuthDocumentAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case16-未认证情况下对病例终端页的操作的权限判断以及认证后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotAuthSickCaseAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case17-未认证情况下对话题终端页的操作的权限判断以及认证后返回来源页校验" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.NotAuthTopicAccessCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case18-邮箱账户|登陆-发布病例-修改病例-发布评论-校验评论成功-删除评论-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.PublishSickCaseCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case19-邮箱账户|登陆-发布话题-发布评论-校验评论成功-删除评论-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.PublishTopicCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case20-邮箱账户|登陆-跳转我的主页-更换头像-跳转他的主页-关注他-回到我的主页关注列表查看关注-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.PersonalHomeOperatorCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case21-搜索医师姓名-搜索关键字" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.SearchResultsCase">
+			</class>
+		</classes>	
+	</test>
+	<test name="case00-邮箱账户|登录-登出" enabled="false" > 
+		<classes>
+			<class name="com.uiatt.cases.TestDemo11">
+			</class>
+		</classes>	
+	</test>
+</suite> 

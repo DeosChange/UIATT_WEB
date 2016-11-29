@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" verbose="2" name="Failed suite [Suite]" skipfailedinvocationcounts="true">
+  <parameter name="LOGIN_CAOS_PHONE_USER" value="17700080002"/>
+  <parameter name="LOGIN_CAOS_EMAIL_USER" value="xyypg7002@163.com"/>
+  <parameter name="GLOBAL_PASSWORD" value="12345678"/>
+  <parameter name="GLOBAL_VALIDCODE" value="d8kswa"/>
+  <parameter name="LOGIN_PHONE_USER" value="17700080001"/>
+  <parameter name="LOGIN_EMAIL_USER" value="xyypg7003@163.com"/>
+  <listeners>
+    <listener class-name="com.uiatt.listener.ScreenShotPC"/>
+  </listeners>
+  <test name="case02-手机账户|登录-登出(failed)">
+    <classes>
+      <class name="com.uiatt.cases.LoginuiattPhoneCase">
+        <methods>
+          <include name="uiattLoginPhone" invocation-numbers="0"/>
+          <include name="logout"/>
+          <include name="assertRegButton"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.uiatt.cases.LoginuiattPhoneCase -->
+      <class name="com.uiatt.cases.LoginuiattEmailCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.uiatt.cases.LoginuiattEmailCase -->
+    </classes>
+  </test> <!-- case02-手机账户|登录-登出(failed) -->
+</suite> <!-- Failed suite [Suite] -->

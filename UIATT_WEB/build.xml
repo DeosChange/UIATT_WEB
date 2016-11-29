@@ -1,0 +1,58 @@
+<project name="sample" default="generateReport" basedir=".">
+	<property name="build.class" value="build/class"/>
+	<property name="src.dir" value="src"/>
+	<property name="lib" value="./lib"/>
+	<property name="testng.file" value="pc_testng.xml"/>
+
+	<!-- COMPILE TESTS-->
+	<path id="cpath">
+		<fileset dir="${lib}" includes="*.jar" />
+	</path>
+
+	<path id="runpath">
+		<path refid="cpath"/>
+		<pathelement location="${build.class}"/>	
+	</path>
+
+	<target name="compile">
+		<echo message="compiling tests"/>
+		<mkdir dir="${build.class}"/>
+		<javac classpathref="cpath"	srcdir="${src.dir}" includeantruntime="on" destdir="${build.class}" encoding="UTF-8"/>
+		<copy todir="${src.dir}">
+		      <fileset dir="${src.dir}">
+		            <include name="**/*.properties"/>  
+		      </fileset>
+		 </copy>
+	</target>
+
+	<taskdef name="testng"
+		classname="com.beust.testng.TestNGAntTask"
+		classpathref="runpath">
+	</taskdef>
+	
+	 
+
+	<!-- RUN TESTS-->
+	<target name="test" depends="compile">
+	    <testng outputdir="test-output" classpathref="runpath" delegateCommandSystemProperties="true">
+	    	<jvmarg value="-Dfile.encoding=UTF-8"/>
+	        <xmlfileset dir="${src.dir}" includes="${testng.file}"/>
+	    </testng>
+	</target>
+	
+	<target name="generateReport" depends="test">
+		 <delete dir="${basedir}/testng-xslt">
+		 </delete>
+		 <mkdir dir="${basedir}/testng-xslt">
+		 </mkdir>
+		 <xslt in="${basedir}/test-output/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
+		       <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+		       <param expression="true" name="testNgXslt.sortTestCaseLinks" />
+		       <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+		       <param expression="true" name="testNgXslt.showRuntimeTotals" />
+		       <classpath refid="runpath">
+		       </classpath>
+		 </xslt>
+	</target>
+
+	</project> 

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--重置密码接口-->
+<infos>
+<apiInfos>
+	<!-- 后台获取短信日志 -->
+	<phoneurl>http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list</phoneurl>
+	<!-- 后台获取邮件日志  -->
+	<emailurl>http://127.0.0.1:8080/uiatt_manager_platform//logEmailAction!list</emailurl>
+	<!-- 后台获取邮件日志 -->
+	<managerEmailUrl>http://manager.uiatt.cn/uiatt_manager_platform//logEmailAction!list</managerEmailUrl>
+	<!-- 后台获取短信日志 -->
+	<managerPhoneUrl>http://manager.uiatt.cn/uiatt_manager_platform//logSmsAction!list</managerPhoneUrl>
+</apiInfos>
+</infos>

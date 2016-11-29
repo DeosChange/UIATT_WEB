@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--PC启动配置参数-->
+<infos>
+	<capabilities>
+		
+	    <chromeDriverName>webdriver.chrome.driver</chromeDriverName>
+	     <!-- 
+	    <chromeDriverName>webdriver.firefox.bin</chromeDriverName>
+	    -->
+	    
+	    <chromeDriverPath>C:\\Users\\lifec\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe</chromeDriverPath>
+	    
+	    <!-- 
+	    <chromeDriverPath>C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe</chromeDriverPath>
+	     -->
+	    <!-- 
+	    <chromeDriverPath>D:\\Program Files\\Mozilla Firefox\\firefox.exe</chromeDriverPath>
+	    --> 
+	    
+	    <log4jConfigPath>/src/log4j.properties</log4jConfigPath>
+	    <loginUrl>http://www.uiattweb.cn</loginUrl>
+	    <LoginWebElements>com.uiatt.pcWeb.LoginWebElements</LoginWebElements>
+	    <!-- 认证证件照片的路径 -->
+	    <AUTH_PHOTO_PATH>\\data\\AUTH_PHOTO.jpg</AUTH_PHOTO_PATH>
+	    <!-- 认证证件号码 -->
+	    <AUTH_PAPER_NUMBER>cs741258963</AUTH_PAPER_NUMBER>
+	    <!-- 认证医院 -->
+	    <AUTH_HOSPITAL>北京咸宁诊所</AUTH_HOSPITAL>
+	    
+	    <!-- 线下获取短信验证码的url,sax解析遇到"&"就认为是一个转义字符串，开始找结束符";"找不到自然就报错,用到"&"的地方改成"&amp;"就好了 -->
+	    <MsgValidCodeUrl1>http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&amp;queryJson={'cellPhone'%3A'</MsgValidCodeUrl1>
+	    <MsgValidCodeUrl2>'}&amp;page=1&amp;rows=1&amp;sort=id</MsgValidCodeUrl2>
+	    <ForgetPWEmail1>http://127.0.0.1:8080/uiatt_manager_platform//logEmailAction!list?order=asc&amp;page=1&amp;queryJson={'email'%3A'</ForgetPWEmail1>
+	    <ForgetPWEmail2>'}&amp;rows=1&amp;sort=id</ForgetPWEmail2>
+	    <newPWValue>87654321</newPWValue>
+	    
+	    <!-- 发布病例信息 -->
+	    <SICKCASE_TITLE>车祸致伤左下肢疼痛畸形</SICKCASE_TITLE>
+	    <SICK_AGE>43</SICK_AGE>
+	    <MAIN_MARRATE>因车祸致伤左下肢疼痛畸形伴功能障碍2小时余入院</MAIN_MARRATE>
+	    <ILLNESS_HISTORY>患者于  2  小时前因车祸致伤左下肢，当即疼痛剧烈，活动不能。被  家人急送我院，在急诊行  X  线检查，诊断:“左胫腓骨骨折”收入我院我科，要  求手术治疗。患者受伤以来，一般情况尚可，无发热畏寒，无大小便失禁，无  外伤后昏迷呕吐史。</ILLNESS_HISTORY>
+	    <SPECIALIST_CHECK>1．呼吸系统：见现病史，无胸痛、盗汗、咯血。 2．循环系统：无心前区疼痛、头昏、头痛及晕厥史。 3．消化系统：无反酸、嗳气、腹痛、腹泻、呕吐、黑便史。 4．泌尿系统：无苍白、尿频、尿急、尿痛、排尿困难、腰痛史。</SPECIALIST_CHECK>
+	    <TXT_DISCUSS>脊柱骨样骨瘤主要需要与成骨细胞瘤(骨母细胞瘤)相鉴别，肿瘤的大小是鉴别这两者的主要依据。骨样骨瘤临床上发展缓慢，疼痛剧烈，瘤巢直径常＜2CM，周边骨质硬化明显；而成骨细胞瘤发展较快，疼痛较轻，瘤巢直径多＞2CM，呈囊状破坏透亮区，内有钙化或骨化。Jayakumar等认为骨样骨瘤有自愈倾向，长期服用非甾体类药物可缓解症状和有治疗作用。骨样骨瘤罕有恶变，目前公认手术切除是治疗脊柱骨样骨瘤确切、有效的方法，完整切除瘤巢是避免复发的关键。</TXT_DISCUSS>
+		<SICK_FIRPHO_PATH>\\script\\upBeforeOperPhoto.exe</SICK_FIRPHO_PATH>
+		<SICK_SECPHO_PATH>\\script\\upDURINGOperPhoto.exe</SICK_SECPHO_PATH>
+		<SICK_THIPHO_PATH>\\script\\upAfterOperPhoto.exe</SICK_THIPHO_PATH>
+		<FIRPHO_BEFO_EXPLAIN>术前呈断裂形式</FIRPHO_BEFO_EXPLAIN>
+		<SECPHO_BEFO_EXPLAIN>术中可见对比</SECPHO_BEFO_EXPLAIN>
+		<THIPHO_BEFO_EXPLAIN>术后固定方案</THIPHO_BEFO_EXPLAIN>
+		<REMIND_INPUT>秋晨</REMIND_INPUT>
+		<PAST_HISTORY>过去体质较弱。否认“肝炎”、“伤寒”、“结核”等传染病史及接触史，无外伤手术史、无输血史及食物药物过敏史，预防接种史不详。</PAST_HISTORY>
+		<PERSONAL_HISTORY>生于原籍，未去过其他地方，小学毕业后就地务农，有烟酒嗜好，烟2包/天，酒半斤/天，无毒物及疫水接触史，无重大精神创伤史，居住条件一舨。</PERSONAL_HISTORY>
+		<FAMILY_HISTORY>家族无遗传病及类似病史可询。</FAMILY_HISTORY>
+		<AUXILIARY_INFO>尿常规：深黄色，微浊，酸性，相对密度1.019，蛋白（－），糖（-），镜检白细胞3～5/HP,透明管型0～1/HP</AUXILIARY_INFO>
+		<DIAGNOSIS_INFO>现在要求入院进一步治疗，患者至发病以来纳差、睡眠欠佳，小便减少，大便正常，体重无明显变化</DIAGNOSIS_INFO>
+		<TREATMENT_RECORD>神经系统:双侧肱二头肌、肱三头肌腱反射及双膝腱、跟腱反射均正常，克氏、布氏征及巴氏征阴性。巴彬斯基征阴性。</TREATMENT_RECORD>
+		<OPERATION_NAME>左下肢正型手术</OPERATION_NAME>
+		<INTRAOPERATIVE_INFO>肋间隙明显增宽两肺有散在干性啰音</INTRAOPERATIVE_INFO>
+		<PRODUCT_INFO>透明管型号0～1/HP</PRODUCT_INFO>
+		
+		<!-- 修改病例信息 ：修改标题、年龄-->
+		<SICKCASE_UPDATE_TITLE>左下肢正型手术病例</SICKCASE_UPDATE_TITLE>
+	    <SICK__UPDATE_AGE>55</SICK__UPDATE_AGE>
+	    
+	    <!-- 评论病例-->
+	    <SICK_COMMENT_TEXT>这是个典型病例，分享的真好，受益匪浅！</SICK_COMMENT_TEXT>
+	    <SICK_COMMENTPHO_PATH>\\script\\upSickCaseCommentPhoto.exe</SICK_COMMENTPHO_PATH>
+	    <SICK_COMMENT_REMIND_INPUT>z</SICK_COMMENT_REMIND_INPUT>
+	    
+	    <!-- 修改头像 -->
+	    <OLDHEADPHOTO>\\script\\upOldHeadPortraitPhoto.exe</OLDHEADPHOTO>
+	    <NEWHEADPHOTO>\\script\\upNewHeadPortraitPhoto.exe</NEWHEADPHOTO>
+	    
+	    <!-- 发布话题信息 -->
+	    <TOPIC_TITLE>骨折必须采用钢板或钢钉吗？</TOPIC_TITLE>
+	    <TOPIC_TXT_DISCUSSS>骨科治疗和其他科室稍有不同，是需要掌握必要的生物力学和材料力学的知识的。以前治疗骨折大多都是手法复位然后绷带固定，这样的做法并不能保证骨头愈合程度和功能的恢复。稍有不慎，骨骼断端对合不好，就会出现畸形。而现在用的钢板钢钉、人工关节之类的器材已经进入人体进行内固定，其在生物力学的角度上说，不但更符合人体骨骼原有形态的保持和功能的恢复，而且可以避免手法复位外固定的愈合不良。既能恢复功能，又可以做到美观，这绝对是技术的进步哇。当然，并不是骨折了就一定要上钢板钢钉，具体的治疗方案还得看骨折的类型以及严重程度，病人身体情况等等。最后和题主说一句，相信我们的医生，眼下的“暴利”和医生的付出相比，简直太微不足道了。</TOPIC_TXT_DISCUSSS>
+	    <TOPICFIRSTPHOTO>\\script\\upTopicFirstPhoto.exe</TOPICFIRSTPHOTO>
+	    <TOPICSECPHOTO>\\script\\upTopicSecPhoto.exe</TOPICSECPHOTO>
+	    
+	</capabilities>	
+</infos>

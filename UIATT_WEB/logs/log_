@@ -1,0 +1,30 @@
+[INFO ] 2016-01-12 15:12:10,829 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2016-01-12 15:12:10,945 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2016-01-12 15:12:10,950 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+uiattLoginEmail Start
+[INFO ] 2016-01-12 15:12:10,951 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2016-01-12 15:12:20,794 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2016-01-12 15:12:25,871 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2016-01-12 15:12:25,874 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+uiattLoginEmail Success
+[INFO ] 2016-01-12 15:12:25,882 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+logout Start
+[INFO ] 2016-01-12 15:12:25,933 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:157)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2016-01-12 15:12:26,526 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:165)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2016-01-12 15:12:26,697 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:179)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2016-01-12 15:12:26,705 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:180)
+获取弹层提示信息:确认退出?
+[INFO ] 2016-01-12 15:12:33,725 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:187)
+会员退出，加载登陆页面
+[INFO ] 2016-01-12 15:12:34,308 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(IndexWebElements.java:211)
+会员登出成功
+[INFO ] 2016-01-12 15:12:34,312 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+logout Success
