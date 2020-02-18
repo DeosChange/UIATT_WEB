@@ -1,0 +1,139 @@
+package com.uiatt.util;
+
+
+import java.io.IOException;
+import java.util.*;
+
+import io.netty.util.internal.StringUtil;
+import lombok.extern.slf4j.Slf4j;
+import redis.clients.jedis.HostAndPort;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisCluster;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
+
+@Slf4j
+public class RedisClusterFlow {
+    private String redisHostDomainName;
+    private Integer redisPort;
+    private JedisCluster jedisCluster;
+
+    public RedisClusterFlow(){
+        Properties prop = AutoContext.propTL.get();
+        redisHostDomainName = prop.getProperty("capital.redis");
+        redisPort = Integer.parseInt(prop.getProperty("redis.port.default"));
+        jedisCluster = initJedisCluster();
+    }
+
+    public JedisCluster initJedisCluster(){
+        Set<HostAndPort> nodes = new HashSet<HostAndPort>();
+        nodes.add(new HostAndPort(redisHostDomainName, redisPort));
+        // Jedis连接池配置
+        JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+        // 最大空闲连接数, 默认8个
+        jedisPoolConfig.setMaxIdle(100);
+        // 最大连接数, 默认8个
+        jedisPoolConfig.setMaxTotal(500);
+        //最小空闲连接数, 默认0
+        jedisPoolConfig.setMinIdle(0);
+        // 获取连接时的最大等待毫秒数(如果设置为阻塞时BlockWhenExhausted),如果超时就抛异常, 小于零:阻塞不确定的时间,  默认-1
+        jedisPoolConfig.setMaxWaitMillis(20000); // 设置2秒
+        //对拿到的connection进行validateObject校验
+        jedisPoolConfig.setTestOnBorrow(true);
+        JedisCluster jedisCluster = new JedisCluster(nodes, jedisPoolConfig);
+        return jedisCluster;
+    }
+
+    public Set<String> redisKeys(String pattern) throws IOException {
+        log.info("search keys with pattern :" + pattern);
+        Set<String> keys = new HashSet<>();
+        Map<String, JedisPool> nodes = jedisCluster.getClusterNodes();
+        for(String k : nodes.keySet()){
+            if(":0".equals(k.trim())){
+                continue;
+            }
+            JedisPool pool = nodes.get(k);
+            Jedis connection = null;
+            try {
+                connection = pool.getResource();
+                //设置空闲连接清理数
+//                connection.configSet("timeout", "30");
+                keys.addAll(connection.keys(pattern));
+//                if(connection.info("Replication").indexOf("role:master") != -1){
+//                    keys.addAll(connection.keys(pattern));
+//                }else{
+//                    log.info(k + " is slave node,skip it.");
+//                }
+//                log.info("clusterNodes : ");
+//                log.info(connection.clusterNodes());
+            } catch(Exception e){
+                log.error("Fail to get keys :", e);
+            } finally{
+                log.info("Close connection.");
+                connection.close();
+            }
+        }
+        log.info("All keys have found :");
+        log.info(keys.size()+"");
+        jedisCluster.close();
+        return keys;
+    }
+
+    public void flushDBForCluster(){
+        Map<String, JedisPool> nodes = jedisCluster.getClusterNodes();
+        for(String k : nodes.keySet()){
+            if(":0".equals(k.trim())){
+                continue;
+            }
+            JedisPool pool = nodes.get(k);
+            //获取Jedis对象，Jedis对象支持keys模糊查询
+            Jedis connection = pool.getResource();
+            try{
+                connection.flushDB();
+            }catch(Exception e){
+                log.error(e.toString());
+            }
+
+        }
+    }
+
+    public Map<String, String> getHashValueMap(String expectedKey){
+        Map<String, String> map = jedisCluster.hgetAll(expectedKey);
+        if(map.size()>0){
+            for(String mkey : map.keySet()){
+                String vString = map.get(mkey);
+                System.out.println(mkey+":"+vString);
+            }
+        }else{
+            log.info("no members found of the key:"+expectedKey);
+        }
+        return map;
+    }
+
+    public Set<String> getSetValueSet(String expectedKey){
+        Set<String> set = jedisCluster.smembers(expectedKey);
+        if(set.size()>0){
+            for(String ele : set){
+                System.out.println(ele);
+            }
+        }else{
+            log.info("no members found of the key:"+expectedKey);
+        }
+        return set;
+    }
+
+    public String getStringValueString(String expectedKey){
+        String data = jedisCluster.get(expectedKey);
+        if(StringUtil.isNullOrEmpty(data)){
+            log.info("no data found of the key:"+expectedKey);
+        }else{
+            log.info(data);
+        }
+        return data;
+    }
+
+    public boolean existKey(String keyName){
+        return jedisCluster.exists(keyName);
+    }
+
+}
