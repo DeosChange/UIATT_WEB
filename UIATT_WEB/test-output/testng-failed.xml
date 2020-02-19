@@ -10,7 +10,7 @@
   <listeners>
     <listener class-name="com.uiatt.listener.ScreenShotPC"/>
   </listeners>
-  <test name="case02-手机账户|登录-登出(failed)">
+  <test name="case02-手机账户||登录-登出(failed)">
     <classes>
       <class name="com.uiatt.cases.LoginuiattPhoneCase">
         <methods>
