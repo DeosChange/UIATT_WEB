@@ -1,0 +1,780 @@
+[INFO ] 2020-02-18 16:04:59,839 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:04:59,862 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:04:59,864 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginEmail Start
+[INFO ] 2020-02-18 16:04:59,864 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 16:05:07,792 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:05:12,810 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 16:05:12,810 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+uiattLoginEmail Success
+[INFO ] 2020-02-18 16:05:12,811 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 16:05:12,858 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:05:13,402 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:05:13,440 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:05:13,443 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:05:20,449 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:05:20,969 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:05:20,969 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 16:05:30,361 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:05:30,377 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:05:30,378 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginPhone Start
+[INFO ] 2020-02-18 16:05:30,378 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 16:05:38,087 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:05:43,102 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 16:05:43,102 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+uiattLoginPhone Success
+[INFO ] 2020-02-18 16:05:43,103 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 16:05:43,148 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:05:43,690 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:05:43,710 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:05:43,712 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:05:50,720 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:05:51,239 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:05:51,240 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 16:06:01,638 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:06:01,657 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:06:01,658 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+caosloginEmail Start
+[INFO ] 2020-02-18 16:06:01,658 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+CAOS邮箱账户开始登录
+[INFO ] 2020-02-18 16:06:13,897 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+caos账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:06:18,910 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+caos账户登录成功
+[INFO ] 2020-02-18 16:06:18,910 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+caosloginEmail Success
+[INFO ] 2020-02-18 16:06:18,911 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 16:06:18,955 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:06:19,515 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:06:19,537 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:06:19,539 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:06:26,545 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:06:27,071 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:06:27,072 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 16:06:36,959 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:06:36,974 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:06:36,974 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+caosloginPhone Start
+[INFO ] 2020-02-18 16:06:36,975 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+CAOS邮箱账户开始登录
+[INFO ] 2020-02-18 16:06:49,183 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+caos账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:06:54,196 method:com.uiatt.pcWeb.LoginWebElements.caosLogin(Unknown Source)
+caos账户登录成功
+[INFO ] 2020-02-18 16:06:54,196 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+caosloginPhone Success
+[INFO ] 2020-02-18 16:06:54,197 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logoutPhone Start
+[INFO ] 2020-02-18 16:06:54,244 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:06:54,794 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:06:54,813 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:06:54,816 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:07:01,822 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:07:02,348 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:07:02,348 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logoutPhone Success
+[INFO ] 2020-02-18 16:07:12,153 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：马
+[INFO ] 2020-02-18 16:07:12,168 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：信瑞
+[INFO ] 2020-02-18 16:07:12,176 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:07:12,190 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:07:12,191 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+regEmailSkipAuth Start
+[INFO ] 2020-02-18 16:07:18,658 method:com.uiatt.pcWeb.RegWebElements.regEmailFlow(Unknown Source)
+跳转并加载注册页面元素
+[INFO ] 2020-02-18 16:07:23,675 method:com.uiatt.pcWeb.RegWebElements.regEmailFlow(Unknown Source)
+输入注册用户名：ifkypg7089@gmail.com
+[INFO ] 2020-02-18 16:07:23,827 method:com.uiatt.pcWeb.RegWebElements.regEmailFlow(Unknown Source)
+输入注册密码：12345678
+[INFO ] 2020-02-18 16:07:23,981 method:com.uiatt.pcWeb.RegWebElements.regEmailFlow(Unknown Source)
+输入确认密码：12345678
+[INFO ] 2020-02-18 16:07:24,092 method:com.uiatt.pcWeb.RegWebElements.regEmailFlow(Unknown Source)
+输入图片的万能验证码：d8kswa
+[INFO ] 2020-02-18 16:07:28,268 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+开始跳转并加载医师认证页面元素
+[INFO ] 2020-02-18 16:07:33,280 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+暂不认证按钮元素确认存在并找到
+[INFO ] 2020-02-18 16:07:37,208 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+点击暂不认证，跳转登录后的主页
+[INFO ] 2020-02-18 16:07:42,223 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+立即认证按钮元素确认存在并找到，暂不认证注册用户登录成功
+[INFO ] 2020-02-18 16:07:42,224 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+regEmailSkipAuth Success
+[INFO ] 2020-02-18 16:07:42,225 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 16:07:42,265 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:07:42,808 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:07:42,829 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:07:42,830 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:07:49,835 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:07:50,357 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:07:50,357 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 16:08:00,500 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：梁
+[INFO ] 2020-02-18 16:08:00,500 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：明德
+[INFO ] 2020-02-18 16:08:00,505 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:08:00,520 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:08:00,521 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+regPhoneSkipAuth Start
+[INFO ] 2020-02-18 16:08:06,031 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+跳转并加载注册页面元素
+[INFO ] 2020-02-18 16:08:11,048 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册用户名：17700080521
+[INFO ] 2020-02-18 16:08:11,162 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册密码：12345678
+[INFO ] 2020-02-18 16:08:11,275 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入确认密码：12345678
+[INFO ] 2020-02-18 16:08:12,372 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+已点击发送短信验证码按钮，等待响应返回值
+[INFO ] 2020-02-18 16:08:12,374 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 16:08:12,376 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.PrintWriter@683ea1ed
+
+[INFO ] 2020-02-18 16:08:12,636 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.BufferedReader@719fead1
+
+[INFO ] 2020-02-18 16:08:12,636 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 16:08:12,637 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(Unknown Source)
+成功获取短信验证码：.【网】
+[INFO ] 2020-02-18 16:08:12,637 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+成功获取短信验证码：.【网】
+[INFO ] 2020-02-18 16:08:16,809 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+开始跳转并加载医师认证页面元素
+[ERROR] 2020-02-18 16:08:21,821 method:com.uiatt.listener.Assertion.assertEquals(Unknown Source)
+java.lang.AssertionError: "暂不认证"按钮未找到，页面不符或元素改变，请检查！ expected [false] but found [true]
+[INFO ] 2020-02-18 16:08:21,822 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+regPhoneSkipAuth Failure
+[INFO ] 2020-02-18 16:08:22,188 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-16-8-22.png
+[INFO ] 2020-02-18 16:08:22,188 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 16:08:31,830 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 16:08:31,845 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 16:08:31,846 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+updatePW Start
+[INFO ] 2020-02-18 16:08:31,846 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 16:08:39,582 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:08:44,596 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 16:08:44,607 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:08:49,643 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+确认悬浮菜单上的“修改资料”按钮存在并单击
+[INFO ] 2020-02-18 16:09:00,189 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+成功跳转到修改资料页
+[INFO ] 2020-02-18 16:09:04,653 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+修改密码保存成功
+[INFO ] 2020-02-18 16:09:04,672 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:09:05,213 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:09:05,232 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:09:05,233 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:09:12,256 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:09:12,780 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:09:15,785 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 16:09:23,465 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 16:09:28,479 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 16:09:28,485 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:09:33,516 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+确认悬浮菜单上的“修改资料”按钮存在并单击
+[INFO ] 2020-02-18 16:09:43,524 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+成功跳转到修改资料页
+[INFO ] 2020-02-18 16:09:47,974 method:com.uiatt.pcWeb.UpdateUSInfoWebElements.updatePW(Unknown Source)
+修改密码保存成功
+[INFO ] 2020-02-18 16:09:47,974 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+updatePW Success
+[INFO ] 2020-02-18 16:09:47,975 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 16:09:47,995 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 16:09:48,536 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 16:09:48,556 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 16:09:48,557 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 16:09:55,561 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 16:09:56,086 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 16:09:56,086 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 16:10:05,760 method:com.uiatt.cases.NotLoginSickCaseAccessCase.setUp(Unknown Source)
+初始化driver值检查 ： ChromeDriver: chrome on XP (e1ce5d87abe458c2f5a638d2654c1037)
+[INFO ] 2020-02-18 16:10:05,761 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+notLoginSickCaseAccess Start
+[INFO ] 2020-02-18 16:10:05,776 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+点击'病例'按钮
+[INFO ] 2020-02-18 16:10:09,129 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+进入病例终端页后点击正在热议的第一条病例的标题
+[INFO ] 2020-02-18 16:10:12,178 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+当前窗口句柄值： CDwindow-6749A295-9E5D-4E6A-80B2-F418C00CAA53
+[INFO ] 2020-02-18 16:10:12,178 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+获取所有窗口句柄值：  [CDwindow-6749A295-9E5D-4E6A-80B2-F418C00CAA53, CDwindow-54AFEA04-3441-4EFE-82EC-B76B8AC9C634]
+[INFO ] 2020-02-18 16:10:12,178 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+切换至病例详情页窗口
+[INFO ] 2020-02-18 16:10:12,178 method:com.uiatt.cases.NotLoginSickCaseAccessCase.notLoginSickCaseAccess(Unknown Source)
+driver值检查：  ChromeDriver: chrome on XP (e1ce5d87abe458c2f5a638d2654c1037) ;当前窗口句柄值检查：CDwindow-54AFEA04-3441-4EFE-82EC-B76B8AC9C634
+[ERROR] 2020-02-18 16:10:15,204 method:com.uiatt.listener.Assertion.assertEquals(Unknown Source)
+java.lang.AssertionError: "立即登录"按钮未找到，页面不符或元素改变，请检查！ expected [false] but found [true]
+[INFO ] 2020-02-18 16:10:15,204 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+notLoginSickCaseAccess Failure
+[INFO ] 2020-02-18 16:10:15,436 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-16-10-15.png
+[INFO ] 2020-02-18 16:10:15,437 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 16:10:25,594 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertSearchButton Start
+[INFO ] 2020-02-18 16:10:25,608 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertSearchButton Success
+[INFO ] 2020-02-18 16:10:25,609 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+searchDoctorName Start
+[INFO ] 2020-02-18 16:10:25,609 method:com.uiatt.pcWeb.SearchResultsWebElements.searchDoctorName(Unknown Source)
+开始输入医师姓名
+[INFO ] 2020-02-18 16:10:27,673 method:com.uiatt.pcWeb.SearchResultsWebElements.searchDoctorName(Unknown Source)
+检查搜索文本输入框的状态：display: block;
+[ERROR] 2020-02-18 16:10:37,643 method:com.uiatt.listener.Assertion.assertEquals(Unknown Source)
+java.lang.AssertionError: 验证在病例匹配结果，不是所输入的医师姓名，请检查 expected [] but found [李涛]
+[INFO ] 2020-02-18 16:10:37,643 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+searchDoctorName Failure
+[INFO ] 2020-02-18 16:10:37,848 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-16-10-37.png
+[INFO ] 2020-02-18 16:10:37,849 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+searchKeyword Skipped
+[INFO ] 2020-02-18 16:34:37,389 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:33)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 16:34:37,400 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:37)
+java.io.PrintWriter@22a71081
+
+[INFO ] 2020-02-18 16:34:37,629 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:44)
+java.io.BufferedReader@629f0666
+
+[INFO ] 2020-02-18 16:34:37,632 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:50)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 16:34:37,633 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(TakeMsgValidCode.java:80)
+成功获取短信验证码：.【网】
+[INFO ] 2020-02-18 16:49:17,413 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:33)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 16:49:17,425 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:37)
+java.io.PrintWriter@22a71081
+
+[INFO ] 2020-02-18 16:49:18,161 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:44)
+java.io.BufferedReader@629f0666
+
+[INFO ] 2020-02-18 16:49:18,164 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:50)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 16:49:18,166 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(TakeMsgValidCode.java:94)
+成功获取短信验证码：.【网】
+[INFO ] 2020-02-18 17:03:13,910 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:33)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:03:13,921 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:37)
+java.io.PrintWriter@22a71081
+
+[INFO ] 2020-02-18 17:03:14,155 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:44)
+java.io.BufferedReader@629f0666
+
+[INFO ] 2020-02-18 17:03:14,158 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:50)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[ERROR] 2020-02-18 17:03:14,159 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(TakeMsgValidCode.java:102)
+短信接口返回的结果为空，无法进行验证码截取，请检查！
+[INFO ] 2020-02-18 17:04:22,461 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:33)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:04:22,472 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:37)
+java.io.PrintWriter@22a71081
+
+[INFO ] 2020-02-18 17:04:22,700 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:44)
+java.io.BufferedReader@629f0666
+
+[INFO ] 2020-02-18 17:04:22,704 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:50)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 17:04:22,705 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(TakeMsgValidCode.java:88)
+成功获取短信验证码：287635
+[INFO ] 2020-02-18 17:05:15,353 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:33)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700080521'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:05:15,365 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:37)
+java.io.PrintWriter@22a71081
+
+[INFO ] 2020-02-18 17:05:15,593 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:44)
+java.io.BufferedReader@629f0666
+
+[INFO ] 2020-02-18 17:05:15,596 method:com.uiatt.util.TakeMsgValidCode.sendPost(TakeMsgValidCode.java:50)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是287635.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 16:08:37.0","cellPhone":"17700080521","pageSize":{},"callbackTime":1451376517000,"maxResult":{},"id":26292,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 17:05:15,597 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(TakeMsgValidCode.java:91)
+成功获取短信验证码：287635
+[INFO ] 2020-02-18 17:11:52,633 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertSearchButton Start
+[INFO ] 2020-02-18 17:11:52,671 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertSearchButton Success
+[INFO ] 2020-02-18 17:11:52,673 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+searchDoctorName Start
+[INFO ] 2020-02-18 17:11:52,673 method:com.uiatt.pcWeb.SearchResultsWebElements.searchDoctorName(SearchResultsWebElements.java:141)
+开始输入医师姓名
+[INFO ] 2020-02-18 17:11:54,745 method:com.uiatt.pcWeb.SearchResultsWebElements.searchDoctorName(SearchResultsWebElements.java:146)
+检查搜索文本输入框的状态：display: block;
+[ERROR] 2020-02-18 17:12:01,901 method:com.uiatt.listener.Assertion.assertEquals(Assertion.java:33)
+java.lang.AssertionError: 验证在病例匹配结果，不是所输入的医师姓名，请检查 expected [] but found [李涛]
+[INFO ] 2020-02-18 17:12:01,904 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+searchDoctorName Failure
+[INFO ] 2020-02-18 17:12:02,258 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-12-2.png
+[INFO ] 2020-02-18 17:12:02,259 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+searchKeyword Skipped
+[INFO ] 2020-02-18 17:13:03,733 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2020-02-18 17:13:03,754 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2020-02-18 17:13:03,756 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+publishTopic Start
+[INFO ] 2020-02-18 17:13:03,773 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:13:11,740 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:13:16,795 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:13:16,795 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:144)
+开始新增话题前准备
+[INFO ] 2020-02-18 17:13:19,434 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:150)
+开始编辑要新增的话题内容
+[INFO ] 2020-02-18 17:13:24,030 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:174)
+D:\MarsWorkspace\uiatt1\\script\\upTopicFirstPhoto.exe
+[INFO ] 2020-02-18 17:13:35,871 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:191)
+D:\MarsWorkspace\uiatt1\\script\\upTopicSecPhoto.exe
+[INFO ] 2020-02-18 17:14:17,448 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:243)
+获取最新一条发布的话题，标题为：《骨折必须采用钢板或钢钉吗？》
+[INFO ] 2020-02-18 17:14:17,502 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:248)
+新增话题《骨折必须采用钢板或钢钉吗？》发布成功
+[INFO ] 2020-02-18 17:14:17,516 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+publishTopic Success
+[INFO ] 2020-02-18 17:14:17,517 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+pubTopicComment Start
+[INFO ] 2020-02-18 17:14:21,778 method:com.uiatt.pcWeb.PublishTopicWebElements.publishComment(PublishTopicWebElements.java:260)
+开始对话题进行发布评论
+[INFO ] 2020-02-18 17:14:21,947 method:com.uiatt.pcWeb.PublishTopicWebElements.publishComment(PublishTopicWebElements.java:268)
+D:\MarsWorkspace\uiatt1\\script\\upSickCaseCommentPhoto.exe
+[INFO ] 2020-02-18 17:14:21,949 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+pubTopicComment Failure
+[INFO ] 2020-02-18 17:14:22,252 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-14-22.png
+[INFO ] 2020-02-18 17:14:22,253 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+logout Skipped
+[INFO ] 2020-02-18 17:28:28,576 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2020-02-18 17:28:28,599 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2020-02-18 17:28:28,602 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+publishTopic Start
+[INFO ] 2020-02-18 17:28:28,618 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:28:36,502 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:28:41,560 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:28:41,561 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:144)
+开始新增话题前准备
+[INFO ] 2020-02-18 17:28:44,197 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:150)
+开始编辑要新增的话题内容
+[INFO ] 2020-02-18 17:28:48,614 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:174)
+D:\MarsWorkspace\uiatt1\\script\\upTopicFirstPhoto.exe
+[INFO ] 2020-02-18 17:28:58,370 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:191)
+D:\MarsWorkspace\uiatt1\\script\\upTopicSecPhoto.exe
+[INFO ] 2020-02-18 17:29:39,845 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:243)
+获取最新一条发布的话题，标题为：《骨折必须采用钢板或钢钉吗？》
+[INFO ] 2020-02-18 17:29:39,900 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:248)
+新增话题《骨折必须采用钢板或钢钉吗？》发布成功
+[INFO ] 2020-02-18 17:29:39,916 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+publishTopic Success
+[INFO ] 2020-02-18 17:29:39,918 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+pubTopicComment Start
+[INFO ] 2020-02-18 17:29:44,194 method:com.uiatt.pcWeb.PublishTopicWebElements.publishComment(PublishTopicWebElements.java:260)
+开始对话题进行发布评论
+[INFO ] 2020-02-18 17:29:47,352 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+pubTopicComment Failure
+[INFO ] 2020-02-18 17:29:47,686 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-29-47.png
+[INFO ] 2020-02-18 17:29:47,687 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+logout Skipped
+[INFO ] 2020-02-18 17:32:46,345 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2020-02-18 17:32:46,369 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2020-02-18 17:32:46,372 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+publishTopic Start
+[INFO ] 2020-02-18 17:32:46,387 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:32:54,236 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:32:59,296 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:32:59,296 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:144)
+开始新增话题前准备
+[INFO ] 2020-02-18 17:33:01,944 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:150)
+开始编辑要新增的话题内容
+[INFO ] 2020-02-18 17:33:03,384 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+publishTopic Failure
+[INFO ] 2020-02-18 17:33:03,654 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-33-3.png
+[INFO ] 2020-02-18 17:33:03,655 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+pubTopicComment Skipped
+[INFO ] 2020-02-18 17:33:03,655 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+logout Skipped
+[INFO ] 2020-02-18 17:33:51,978 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2020-02-18 17:33:52,001 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2020-02-18 17:33:52,004 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+publishTopic Start
+[INFO ] 2020-02-18 17:33:52,020 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:33:59,975 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:34:05,035 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:34:05,036 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:144)
+开始新增话题前准备
+[INFO ] 2020-02-18 17:34:07,671 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:150)
+开始编辑要新增的话题内容
+[INFO ] 2020-02-18 17:34:12,160 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:174)
+D:\MarsWorkspace\uiatt1\\script\\upTopicFirstPhoto.exe
+[INFO ] 2020-02-18 17:34:23,949 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:191)
+D:\MarsWorkspace\uiatt1\\script\\upTopicSecPhoto.exe
+[INFO ] 2020-02-18 17:34:43,107 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+publishTopic Failure
+[INFO ] 2020-02-18 17:34:43,415 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-34-43.png
+[INFO ] 2020-02-18 17:34:43,416 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+pubTopicComment Skipped
+[INFO ] 2020-02-18 17:34:43,417 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+logout Skipped
+[INFO ] 2020-02-18 17:35:53,773 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+assertRegButton Start
+[INFO ] 2020-02-18 17:35:53,798 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(ScreenShotPC.java:42)
+assertRegButton Success
+[INFO ] 2020-02-18 17:35:53,800 method:com.uiatt.listener.ScreenShotPC.onTestStart(ScreenShotPC.java:49)
+publishTopic Start
+[INFO ] 2020-02-18 17:35:53,815 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:209)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:36:02,155 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:227)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:36:07,215 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(LoginWebElements.java:231)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:36:07,215 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:144)
+开始新增话题前准备
+[INFO ] 2020-02-18 17:36:09,847 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:150)
+开始编辑要新增的话题内容
+[INFO ] 2020-02-18 17:36:14,086 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:174)
+D:\MarsWorkspace\uiatt1\\script\\upTopicFirstPhoto.exe
+[INFO ] 2020-02-18 17:36:23,807 method:com.uiatt.pcWeb.PublishTopicWebElements.publishTopic(PublishTopicWebElements.java:191)
+D:\MarsWorkspace\uiatt1\\script\\upTopicSecPhoto.exe
+[ERROR] 2020-02-18 17:36:34,916 method:com.uiatt.listener.Assertion.assertEquals(Assertion.java:33)
+java.lang.AssertionError: "话题删除第二张照片"按钮未找到，页面不符或元素未找到，请检查！ expected [false] but found [true]
+[INFO ] 2020-02-18 17:36:34,919 method:com.uiatt.listener.ScreenShotPC.onTestFailure(ScreenShotPC.java:26)
+publishTopic Failure
+[INFO ] 2020-02-18 17:36:35,224 method:com.uiatt.listener.ScreenShotPC.screenShot(ScreenShotPC.java:136)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-36-35.png
+[INFO ] 2020-02-18 17:36:35,226 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+pubTopicComment Skipped
+[INFO ] 2020-02-18 17:36:35,226 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(ScreenShotPC.java:35)
+logout Skipped
+[INFO ] 2020-02-18 17:38:13,751 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：温
+[INFO ] 2020-02-18 17:38:13,754 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：阳夏
+[INFO ] 2020-02-18 17:38:13,768 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:38:13,789 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:38:13,790 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+regPhoneSkipAuth Start
+[INFO ] 2020-02-18 17:38:24,713 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+跳转并加载注册页面元素
+[INFO ] 2020-02-18 17:38:29,735 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册用户名：17700093791
+[INFO ] 2020-02-18 17:38:29,854 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册密码：12345678
+[INFO ] 2020-02-18 17:38:29,978 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入确认密码：12345678
+[INFO ] 2020-02-18 17:38:34,139 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+已点击发送短信验证码按钮，等待响应返回值
+[INFO ] 2020-02-18 17:38:34,148 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700093791'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:38:34,149 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.PrintWriter@744bd2ca
+
+[INFO ] 2020-02-18 17:38:34,396 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.BufferedReader@4cceb677
+
+[INFO ] 2020-02-18 17:38:34,397 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+{"total":1,"rows":[{"smsContent":"您在的短信验证码是821246.【网】","sendMtstat":{},"firstResult":0,"ids":{},"smsDesc":{},"sendTime":"2020-02-18 17:38:57.0","cellPhone":"17700093791","pageSize":{},"callbackTime":1451381937000,"maxResult":{},"id":26296,"mtmsgid":"1","page":{},"sortType":0,"sendMterrcode":{},"callbackMtstat":{},"callbackMterrcode":{}}]}
+
+[INFO ] 2020-02-18 17:38:34,398 method:com.uiatt.util.TakeMsgValidCode.takeMsgValidCode(Unknown Source)
+成功获取短信验证码：821246
+[INFO ] 2020-02-18 17:38:34,398 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+成功获取短信验证码：821246
+[INFO ] 2020-02-18 17:38:38,571 method:com.uiatt.pcWeb.RegWebElements.skipAuth(Unknown Source)
+开始跳转并加载医师认证页面元素
+[INFO ] 2020-02-18 17:38:43,577 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+regPhoneSkipAuth Failure
+[INFO ] 2020-02-18 17:38:43,803 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-38-43.png
+[INFO ] 2020-02-18 17:38:43,803 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 17:38:57,619 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：蔡
+[INFO ] 2020-02-18 17:38:57,620 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：烨磊
+[INFO ] 2020-02-18 17:38:57,628 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:38:57,644 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:38:57,644 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+regPhoneDoneAuth Start
+[INFO ] 2020-02-18 17:39:03,149 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+跳转并加载注册页面元素
+[INFO ] 2020-02-18 17:39:08,170 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册用户名：17700037645
+[INFO ] 2020-02-18 17:39:08,294 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册密码：12345678
+[INFO ] 2020-02-18 17:39:08,414 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入确认密码：12345678
+[INFO ] 2020-02-18 17:39:09,195 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+已点击发送短信验证码按钮，等待响应返回值
+[INFO ] 2020-02-18 17:39:09,197 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700037645'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:39:09,200 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.PrintWriter@74c61fdc
+
+[INFO ] 2020-02-18 17:39:10,357 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.BufferedReader@33c94d9b
+
+[INFO ] 2020-02-18 17:39:10,357 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+null
+
+[INFO ] 2020-02-18 17:39:10,357 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+成功获取短信验证码：
+[ERROR] 2020-02-18 17:39:10,531 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+请填写短信验证码。
+[INFO ] 2020-02-18 17:39:10,570 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+regPhoneDoneAuth Failure
+[INFO ] 2020-02-18 17:39:10,724 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-39-10.png
+[INFO ] 2020-02-18 17:39:10,724 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 17:53:30,095 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:53:30,117 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:53:30,118 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginEmail Start
+[INFO ] 2020-02-18 17:53:30,119 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:53:37,858 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:53:42,873 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:53:42,874 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+uiattLoginEmail Success
+[INFO ] 2020-02-18 17:53:42,874 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 17:53:42,897 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 17:53:43,449 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 17:53:43,472 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 17:53:43,474 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 17:53:50,481 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 17:53:51,001 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 17:53:51,001 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 17:54:01,113 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:54:01,129 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:54:01,130 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginPhone Start
+[INFO ] 2020-02-18 17:54:01,130 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[ERROR] 2020-02-18 17:54:08,885 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+用户名或密码错误
+[INFO ] 2020-02-18 17:54:08,912 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+uiattLoginPhone Failure
+[INFO ] 2020-02-18 17:54:09,209 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-54-9.png
+[INFO ] 2020-02-18 17:54:09,210 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 17:54:19,023 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：茅
+[INFO ] 2020-02-18 17:54:19,024 method:com.uiatt.util.ReadWriteTxtFile.ReadTxtLine(Unknown Source)
+成功取出用户名信息：旭尧
+[INFO ] 2020-02-18 17:54:19,033 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:54:19,049 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:54:19,052 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+regPhoneSkipAuth Start
+[INFO ] 2020-02-18 17:54:24,524 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+跳转并加载注册页面元素
+[INFO ] 2020-02-18 17:54:29,540 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册用户名：17700059052
+[INFO ] 2020-02-18 17:54:29,661 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入注册密码：12345678
+[INFO ] 2020-02-18 17:54:29,782 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+输入确认密码：12345678
+[INFO ] 2020-02-18 17:54:30,649 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+已点击发送短信验证码按钮，等待响应返回值
+[INFO ] 2020-02-18 17:54:30,653 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+sun.net.www.protocol.http.HttpURLConnection:http://127.0.0.1:8080/uiatt_manager_platform//logSmsAction!list?order=asc&queryJson={'cellPhone'%3A'17700059052'}&page=1&rows=1&sort=id
+
+[INFO ] 2020-02-18 17:54:30,655 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.PrintWriter@3a3408ff
+
+[INFO ] 2020-02-18 17:57:19,471 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:57:19,493 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:57:19,495 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginEmail Start
+[INFO ] 2020-02-18 17:57:19,495 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[INFO ] 2020-02-18 17:57:27,230 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户名与密码输入正确，跳转登陆成功后的页面
+[INFO ] 2020-02-18 17:57:32,246 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户登录成功
+[INFO ] 2020-02-18 17:57:32,246 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+uiattLoginEmail Success
+[INFO ] 2020-02-18 17:57:32,247 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+logout Start
+[INFO ] 2020-02-18 17:57:32,275 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+鼠标移至登陆后右上角用户名按钮上
+[INFO ] 2020-02-18 17:57:32,816 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+确认悬浮菜单上的退出按钮存在并单击以获取确认退出的提示弹层
+[INFO ] 2020-02-18 17:57:32,851 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+登出的确认弹层是否被触发显示出来了：alert to be present
+[INFO ] 2020-02-18 17:57:32,853 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+获取弹层提示信息:确认退出?
+[INFO ] 2020-02-18 17:57:34,700 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+java.io.BufferedReader@10956839
+
+[INFO ] 2020-02-18 17:57:34,701 method:com.uiatt.util.TakeMsgValidCode.sendPost(Unknown Source)
+null
+
+[INFO ] 2020-02-18 17:57:34,701 method:com.uiatt.pcWeb.RegWebElements.regPhoneFlow(Unknown Source)
+成功获取短信验证码：
+[INFO ] 2020-02-18 17:57:36,708 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+regPhoneSkipAuth Failure
+[INFO ] 2020-02-18 17:57:36,931 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-57-36.png
+[INFO ] 2020-02-18 17:57:36,931 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
+[INFO ] 2020-02-18 17:57:39,859 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员退出，加载登陆页面
+[INFO ] 2020-02-18 17:57:40,378 method:com.uiatt.pcWeb.IndexWebElements.uiattLogout(Unknown Source)
+会员登出成功
+[INFO ] 2020-02-18 17:57:40,378 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+logout Success
+[INFO ] 2020-02-18 17:57:50,715 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+assertRegButton Start
+[INFO ] 2020-02-18 17:57:50,733 method:com.uiatt.listener.ScreenShotPC.onTestSuccess(Unknown Source)
+assertRegButton Success
+[INFO ] 2020-02-18 17:57:50,734 method:com.uiatt.listener.ScreenShotPC.onTestStart(Unknown Source)
+uiattLoginPhone Start
+[INFO ] 2020-02-18 17:57:50,735 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+邮箱账户开始登录
+[ERROR] 2020-02-18 17:57:58,482 method:com.uiatt.pcWeb.LoginWebElements.uiattLogin(Unknown Source)
+用户名或密码错误
+[INFO ] 2020-02-18 17:57:58,508 method:com.uiatt.listener.ScreenShotPC.onTestFailure(Unknown Source)
+uiattLoginPhone Failure
+[INFO ] 2020-02-18 17:57:58,801 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
+通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-57-58.png
+[INFO ] 2020-02-18 17:57:58,802 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
+logout Skipped
