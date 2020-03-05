@@ -1,0 +1,109 @@
+package com.uiatt.listener;
+
+import java.io.StringReader;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+
+public class JsonAssertListener {
+
+	public static void main(String[] args) {
+		String obj1 = "{\"age\":23,\"name\":\"change\",\"message\":[\"mes1\",\"mes2\",\"mes3\"]}";
+    String obj2 = "{\"name\":\"change\",\"age\":23,\"message\":[\"mes2\",\"mes3\",\"mes1\"]}";
+		List<String> ignoreKeyList = Arrays.asList("similarity","ip");
+        jsonEqualAssert(obj1, obj2,ignoreKeyList);
+	}
+	
+	/**
+	 * 比对两个json，可兼容key的顺序不同，可忽略想要略过的key
+	 * @param expectedJsonStr
+	 * @param actualJsonStr
+	 * @param ignoreKeysList
+	 * @return
+	 */
+	public static boolean jsonEqualAssert(String expectedJsonStr,String actualJsonStr,List<String> ignoreKeysList) {
+		JsonParser parser = new JsonParser();
+		JsonElement jsonElementExpected = parser.parse(new StringReader(expectedJsonStr));
+        JsonElement jsonElementActual = parser.parse(new StringReader(actualJsonStr));
+        boolean equalResult = compareJson(jsonElementExpected, jsonElementActual, ignoreKeysList);
+        System.out.println(equalResult);
+        return equalResult;
+	}
+
+	public static boolean compareJson(JsonElement json1, JsonElement json2, List<String> ignoreKeysList) {
+        boolean isEqual = true;
+        // Check whether both jsonElement are not null
+        if(json1 !=null && json2 !=null) {
+            // Check whether both jsonElement are objects
+            if (json1.isJsonObject() && json2.isJsonObject()) {
+                Set<Entry<String, JsonElement>> ens1 = ((JsonObject) json1).entrySet();
+                Set<Entry<String, JsonElement>> ens2 = ((JsonObject) json2).entrySet();
+                JsonObject json2obj = (JsonObject) json2;
+                if (ens1 != null && ens2 != null && (ens2.size() == ens1.size())) {
+                    // Iterate JSON Elements with Key values
+                    for (Entry<String, JsonElement> en : ens1) {
+                    	String enKey = en.getKey();
+                    	if(ignoreKeysList != null && ignoreKeysList.contains(enKey)){
+                    		isEqual = true;
+                    	}else{
+                    		isEqual = isEqual && compareJson(en.getValue() , json2obj.get(en.getKey()),ignoreKeysList);
+                    	}
+                    }
+                } else {
+                    return false;
+                }
+            } 
+            
+            // Check whether both jsonElement are arrays
+            else if (json1.isJsonArray() && json2.isJsonArray()) {
+                JsonArray jarr1 = json1.getAsJsonArray();
+                JsonArray jarr2 = json2.getAsJsonArray();
+                if(jarr1.size() != jarr2.size()) {
+                    return false;
+                } else {
+                    // 不管arry中的元素顺序如何
+                    for (JsonElement je : jarr1) {
+                    	
+                    	boolean eleEqual = false;
+                    	for(int i=0;i<jarr2.size();i++){
+                    		if(eleEqual){
+                    			break;
+                    		}
+                    		eleEqual = compareJson(je , jarr2.get(i),ignoreKeysList);
+                    	}
+                        isEqual = eleEqual;
+                    }   
+                }
+            }
+            
+            // Check whether both jsonElement are null
+            else if (json1.isJsonNull() && json2.isJsonNull()) {
+                return true;
+            } 
+            
+            // Check whether both jsonElement are primitives
+            else if (json1.isJsonPrimitive() && json2.isJsonPrimitive()) {
+                if(json1.equals(json2)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else if(json1 == null && json2 == null) {
+            return true;
+        } else {
+            return false;
+        }
+        return isEqual;
+    }
+	
+
+}
