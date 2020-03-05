@@ -1,0 +1,28 @@
+package com.uiatt.pcWeb;
+
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Action {
+	public static List<String> createByNum(Integer numOfObjects,String operatorTag,String env,String actionName) throws IOException, InterruptedException{
+		List<String> resultDataList = new LinkedList<>();
+		for(int i=0;i<numOfObjects;i++){
+			String sevenBitNumber = SomeUtils.convertToServenBitNum(i+"");
+			if("dataTooLong".equals(sevenBitNumber)){
+				System.out.println("dataTooLong");
+				break;
+			}
+			String resultData = HttpUtils.request(sevenBitNumber, actionName, env,operatorTag,null,null);
+//			System.out.println(personUuid);
+			resultDataList.add(resultData);
+		}
+		String fileName = actionName;
+		SomeUtils.recordResultDate(fileName, resultDataList);
+		return resultDataList;
+	}
+	
+	public static void addMemberIntoGroup(){
+		
+	}
+}
