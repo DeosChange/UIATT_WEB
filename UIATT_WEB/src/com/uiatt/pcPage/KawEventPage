@@ -1,0 +1,126 @@
+package com.uiatt.pcPage;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Properties;
+import java.util.Queue;
+
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.Producer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringSerializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
+public class KawEventPage {
+	private static final Logger logger = LoggerFactory.getLogger(KawEventPage.class);
+	static Queue<String> deviceUuidQueue = new LinkedList<>();
+	static Queue<String> personUuidQueue = new LinkedList<>();
+	static{
+		SomeUtils.cleanLogs();
+		deviceUuidQueue = SomeUtils.getQueueFromDataFile("kDeviceSn.csv");
+		personUuidQueue = SomeUtils.getQueueFromDataFile("kPersonUuid.csv");
+	}
+	public static void main(String[] args) {
+		String messageCountParamArg = args[0];
+//		Long sleepMs = Long.parseLong(args[1]);
+//		Long sleepMs = 0l;
+		Long sleepMs = 30l;
+//		String messageCountParamArg = "100";
+		int paraDeviceCountPerSec = Integer.parseInt(args[1]);
+//		String server = args[1];
+		Long messageCountParam = SomeUtils.convertBigNumber(messageCountParamArg, "1w");
+		Producer<String, String> producer = initKafkaConnect();
+		sendMessage(0, messageCountParam, producer, deviceUuidQueue, personUuidQueue, sleepMs, paraDeviceCountPerSec);
+		producer.close();
+	}
+	
+	public static void sendMessage(Integer startCount, Long messageCount, Producer<String, String> producer,
+			Queue<String> deviceUuidQueue, Queue<String> personUuidQueue, Long sleepMs,int paraDeviceCountPerSec){
+		Long numberCount = 1l;
+		Long dayCount = (messageCount / 86400) + 10 + startCount;
+		Long breakCount = messageCount;
+		Integer dayIntervalCount = 0;
+		Integer sleepCount = 0;// 每10条等1ms，避免写cassandra timeout，导致flink cancel
+		Long sleepTimeMsCount = 0l;// 统计最后总共sleep了多少时间，最后要减去；
+		for (int i = startCount; i < dayCount; i++) {
+			dayIntervalCount += 1;
+			if (numberCount.longValue() > breakCount.longValue()) {
+				break;
+			}
+			Integer dateCount = i ;
+			String date = RandomTimeUtils.getDateByIntervalCountFromToday(dateCount);// 自带空格
+//			 String date = "2019-04-10 ";
+			for (int k = 0; k < 24; k++) {
+				if (numberCount.longValue() > breakCount.longValue()) {
+					break;
+				}
+				String hourStr = "";
+				if (k < 10) {
+					hourStr = "0" + k;
+				} else {
+					hourStr = "" + k;
+				}
+				// 按时分秒顺序发
+				List<String> timeList = new LinkedList<>();
+				timeList = RandomTimeUtils.getDistinctHHByCount(hourStr);
+				for (String time : timeList) {
+					if (numberCount.longValue() > breakCount.longValue()) {
+						break;
+					}
+					String dateTime = date + time;
+					for (int j = 0; j < paraDeviceCountPerSec; j++) {
+						if (numberCount.longValue() > breakCount.longValue()) {
+							break;
+						}
+						String deviceUuid = deviceUuidQueue.poll();
+						String personUuid = personUuidQueue.poll();
+						String key = deviceUuid + "," + dateTime + "," + personUuid + "," + numberCount + ","
+								+ sleepTimeMsCount;
+						logger.info(key);
+						String message = getMessage(deviceUuid, dateTime, personUuid);
+						producer.send(new ProducerRecord<String, String>("KawEventPage", key, message));
+						numberCount += 1;
+						sleepCount += 1;
+						if (sleepCount == 10000) {
+							sleepCount = 0;
+							try {
+								Thread.sleep(sleepMs);
+								sleepTimeMsCount += 1;
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+						}
+						deviceUuidQueue.offer(deviceUuid);
+						personUuidQueue.offer(personUuid);
+					}
+				}
+			}
+
+		}
+	}
+	
+	public static String getMessage(String deviceSn,String dateTime,String personUuid){
+		String message = "demo01";
+		return message;
+	}
+	
+	public static Producer<String, String> initKafkaConnect(){
+		Properties props = new Properties();
+		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
+		props.put(ProducerConfig.CLIENT_ID_CONFIG, "changeTest");
+//		props.put("acks", "all");
+//		props.put("retries", 0);
+//		props.put("batch.size", 16384);
+//		props.put("linger.ms", 1);
+//		props.put("buffer.memory", 33554432);
+		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+		Producer<String,String> producer = new KafkaProducer<String, String>(props);
+		return producer;
+	}
+
+}
