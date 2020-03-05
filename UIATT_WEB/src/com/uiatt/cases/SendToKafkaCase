@@ -1,0 +1,99 @@
+package com.test.flink.run;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+import org.apache.kafka.clients.producer.Producer;
+
+
+public class SendToKafkaCase {
+	static Queue<String> deviceUuidQueue = new LinkedList<>();
+	static Queue<String> personUuidQueue = new LinkedList<>();
+	static{
+		SomeUtils.cleanLogs();
+		deviceUuidQueue = SomeUtils.getQueueFromDataFile("fDeviceUuid.csv");
+		personUuidQueue = SomeUtils.getQueueFromDataFile("fPersonUuid.csv");
+	}
+	public static void main(String[] args){
+//		if((args.length == 1) && ("-h".equals(args[0]))){
+//			System.out.println("three params : java -jar xxx.jar flinkJobSerialNo sourceRecordsSent calculateRecords");
+//		}
+		String messageCountParamArg = args[0];
+//		Long sleepMs = Long.parseLong(args[1]);
+		Long sleepMs = 30l;
+//		String messageCountParamArg = "100";
+		int paraDeviceCountPerSec = 100;
+		String server = "127.0.0.1:9092";
+		Long messageCountParam = SomeUtils.convertBigNumber(messageCountParamArg, "1w");
+//		Long messageCountParam = Long.parseLong(args[0]);
+//		Long messageCountParam = Long.parseLong(args[0]);
+		new Thread(new FaceProducerRunnable(0,messageCountParam,deviceUuidQueue,personUuidQueue,sleepMs,paraDeviceCountPerSec,server)).start();
+//		Long startTime = System.currentTimeMillis();
+//		String jobSerialNo = "5606e1ba7d507bc2700861792f175391";
+//		Long sourceRecordsSent = Long.parseLong("1000124")+ messageCountParam;
+//		Long calculateRecords = Long.parseLong("1000320")+messageCountParam;
+		
+//		Integer startCount = 580;
+//		Integer startCount = Integer.parseInt(args[0]);
+//		String jobSerialNo = args[1];
+//		Long sourceRecordsSent = Long.parseLong(args[2])+ messageCountParam;
+//		Long calculateRecords = Long.parseLong(args[3])+messageCountParam;
+//		new Thread(new FaceSourceCostTimeRunnable(jobSerialNo,sourceRecordsSent,startTime)).start();
+//		new Thread(new FaceCalculateCostTimeRunnable(jobSerialNo,calculateRecords,startTime)).start();
+	}
+	
+	
+}
+
+class FaceProducerRunnable implements Runnable{
+	Long messageCount = 0l;
+	Integer startCount = 0;
+	Integer paraDeviceCountPerSec = 0;
+	Queue<String> deviceUuidList;
+	Queue<String> personUuidList;
+	Long sleepMs;
+	String serverParm = "";
+	public FaceProducerRunnable(Integer startCountParam,Long messageCountParam,Queue<String> deviceUuidListParam,Queue<String> personUuidListParam,Long sleepMsParam,Integer paraDeviceCountPerSecParam,String server){
+		this.messageCount = messageCountParam;
+		this.startCount = startCountParam;
+		this.deviceUuidList = deviceUuidListParam;
+		this.personUuidList = personUuidListParam;
+		this.sleepMs = sleepMsParam;
+		this.paraDeviceCountPerSec = paraDeviceCountPerSecParam;
+		this.serverParm = server;
+	}
+	public void run(){
+		Producer<String, String> producer = KafkaUtils.initProducer(serverParm);	
+		KafkaUtils.sendFaceMessageNew(startCount,messageCount, producer,deviceUuidList,personUuidList,sleepMs,paraDeviceCountPerSec);;
+		producer.close();
+	}
+}
+
+class FaceSourceCostTimeRunnable implements Runnable{
+	String flinkJobSerialNo = "";
+	Long sourceRecordsSent = 0l;
+	Long startTime = 0l;
+	public FaceSourceCostTimeRunnable(String flinkJobSerialNoParam,Long sourceRecordsSentParam,Long startTimeParam){
+		this.flinkJobSerialNo = flinkJobSerialNoParam;
+		this.sourceRecordsSent = sourceRecordsSentParam;
+		this.startTime = startTimeParam;
+	}
+	public void run(){
+		GetFlinkDataUtils.getFlinkSourceCostTime("stg",flinkJobSerialNo,sourceRecordsSent,0,startTime);
+	}
+}
+
+class FaceCalculateCostTimeRunnable implements Runnable{
+	String flinkJobSerialNo = "";
+	Long calculateRecords = 0l;
+	Long startTime = 0l;
+	public FaceCalculateCostTimeRunnable(String flinkJobSerialNoParam,Long calculateRecordsParam,Long startTimeParam){
+		this.flinkJobSerialNo = flinkJobSerialNoParam;
+		this.calculateRecords = calculateRecordsParam;
+		this.startTime = startTimeParam;
+	}
+	public void run(){
+		GetFlinkDataUtils.getFlinkCalculateCostTime("stg",flinkJobSerialNo,calculateRecords,3,startTime);
+	}
+}
