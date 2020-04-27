@@ -23,9 +23,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class UpdateUSInfoWebElements {
-	public static Logger logger = Logger.getLogger(UpdateUSInfoWebElements.class );
 	// 修改密码按钮
 	@FindBy(xpath = UpdateUSInfoPageElements.UPDATE_PW)
 	public static WebElement update_pw;
