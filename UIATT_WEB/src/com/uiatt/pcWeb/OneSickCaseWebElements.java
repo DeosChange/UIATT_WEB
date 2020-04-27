@@ -16,10 +16,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
-
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class OneSickCaseWebElements {
-	public static Logger logger = Logger.getLogger(OneSickCaseWebElements.class );
 	// 未登录查看病例详情，提示立即登录
 	@FindBy(xpath = OneSickCasePageElements.LOGIN_NOW)
 	public static WebElement login_now;
