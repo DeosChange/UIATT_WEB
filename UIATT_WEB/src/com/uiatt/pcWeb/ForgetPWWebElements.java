@@ -22,10 +22,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
-
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class ForgetPWWebElements {
-	public static Logger logger = Logger.getLogger(ForgetPWWebElements.class );
 	// 忘记密码的邮箱或手机
 	@FindBy(xpath = ForgetPWPageElements.RESET_USNAME)
 	public static WebElement reset_usname;
