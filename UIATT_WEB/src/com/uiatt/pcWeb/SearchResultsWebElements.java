@@ -22,9 +22,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class SearchResultsWebElements {
-	public static Logger logger = Logger.getLogger(SearchResultsWebElements.class );
 	//搜索出的病例结果选项
 	@FindBy(xpath = SearchResultsPageElements.SICKCASE_OPTION)
 	public static WebElement sickCase_option;
