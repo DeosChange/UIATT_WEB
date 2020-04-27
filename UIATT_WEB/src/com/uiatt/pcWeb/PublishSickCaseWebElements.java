@@ -28,9 +28,9 @@ import com.uiatt.util.Utils;
  * 点击发布病例后的所有元素；
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class PublishSickCaseWebElements {
-	public static Logger logger = Logger.getLogger(PublishSickCaseWebElements.class );
 	//普通上传
 	@FindBy(xpath = PublishSickCasePageElements.NORMAL_PUBLISH)
 	public static WebElement normal_publish;
