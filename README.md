@@ -18,8 +18,12 @@ UIATT_WEB:ui auto test tool for web.
 |-util:定义各个公共方法
 
 
-本框架目前版本：V2.0.0
+本框架目前版本：V3.0.0
+优势：
+1、增加更丰富的utils包；
+2、增加了对更多中间件的支持，比如kafka、redis、canssaandra；
 
+V2.0.0
 优势：
 
 1、设置了灵活的监听，不再需要在代码中到处添加异常捕获和截图的语句；
