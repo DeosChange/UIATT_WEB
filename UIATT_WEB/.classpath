@@ -2,9 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/log4j-1.2.13.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/selenium-java-2.45.0.jar" sourcepath="D:/MarsWorkspace/allinmdPCAuto1/lib/selenium-java-2.45.0-srcs.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/selenium-server-standalone-2.45.0.jar"/>
+	<classpathentry kind="lib" path="./allinmdPCAuto1/lib/log4j-1.2.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="./allinmdPCAuto1/lib/selenium-java-2.45.0.jar" sourcepath="D:/MarsWorkspace/allinmdPCAuto1/lib/selenium-java-2.45.0-srcs.jar"/>
+	<classpathentry exported="true" kind="lib" path="./allinmdPCAuto1/lib/selenium-server-standalone-2.45.0.jar"/>
 	<classpathentry kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/testng.jar"/>
 	<classpathentry kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/commons-httpclient.jar"/>
 	<classpathentry kind="lib" path="D:/MarsWorkspace/allinmdPCAuto1/lib/dom4j-1.6.1.jar"/>
