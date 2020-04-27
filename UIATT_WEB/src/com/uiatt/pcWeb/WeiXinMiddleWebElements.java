@@ -15,9 +15,9 @@ import com.uiatt.util.Utils;
  * 注册并完成医师认证后跳转的微信扫码关注公众号的中间页面；
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class WeiXinMiddleWebElements {
-	public static Logger logger = Logger.getLogger(WeiXinMiddleWebElements.class );
 	// 显示为“欢迎你，XX”
 	@FindBy(xpath = WeiXinMiddlePageElements.WELCOME_TITLE)
 	public static WebElement welcome_title;
