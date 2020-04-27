@@ -3,6 +3,8 @@
 <suite name="Suite" verbose="2"  configfailurepolicy="continue" 
     time-out="300000" skipfailedinvocationcounts="true" preserve-order="true" > 
 	<parameter name="GLOBAL_PASSWORD" value="12345678" />
+	<parameter name="KAFKA_PASSWORD" value="12345678" />
+	<parameter name="REDIS_PASSWORD" value="12345678" />
 	<parameter name="GLOBAL_VALIDCODE" value="d8kswa" />
 	<parameter name="LOGIN_EMAIL_USER" value="xyypg7003@163.com" />
 	<parameter name="LOGIN_PHONE_USER" value="17700080001" />
