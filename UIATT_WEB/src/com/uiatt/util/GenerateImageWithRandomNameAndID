@@ -1,0 +1,97 @@
+package com.uiatt.util.generateImageWithRandomID;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Set;
+
+import work.utils.ChineseNameGenerator;
+import work.utils.IdCardNumberGenerator;
+
+public class GenerateImageWithRandomNameAndID {
+	static String originalImagePath = "D:\\forWork\\photo\\company1";
+	static String desImageParentPath = "D:\\forWork\\photo\\company\\";
+	public static void main(String[] args) throws Exception {
+		Integer imageCount = Integer.parseInt(args[0]);
+		String keyWord = args[1];
+//		String originalImagePath = args[2];
+//		String desImageParentPath = args[3];
+//		generateImageWithRandomNameAndID(1600);
+//		generateImageWithRandomNameAndID(4000);
+//		generateImageWithRandomNameAndID(868);
+		generateImageWithRandomNameAndID(imageCount,keyWord,originalImagePath,desImageParentPath);
+//		generateImageWithRandomNameAndID(25);
+//		generateImageWithRandomNameAndID(3000);
+//		generateImageWithRandomNameAndID(5000);
+//		generateImageWithRandomNameAndID(15000);
+//		generateImageWithRandomNameAndID(20000);
+//		generateImageWithRandomNameAndID(30000);
+	}
+	
+	//传入要生成图片的数量
+	public static void generateImageWithRandomNameAndID(Integer imageCount,String keyWord,String originalImagePath,String desImageParentPath) throws Exception{
+		File origImageDir = new File(originalImagePath);
+		if(origImageDir.isDirectory()){
+			File[] origImagesList = origImageDir.listFiles();
+			Queue<File> imageQueue = new LinkedList<File>();
+			while(true){
+				if(imageQueue.size() == imageCount){
+					break;
+				}
+				for(File ele : origImagesList){
+					if(imageQueue.size() == imageCount){
+						break;
+					}
+					imageQueue.offer(ele);
+				}
+			}
+//			System.out.println(imageQueue.size());
+			String desImageDirPath = desImageParentPath + imageCount +"person_"+System.currentTimeMillis() +"\\";
+			File desImageDir = new File(desImageDirPath);
+	        if (!desImageDir.exists()) {
+	        	desImageDir.mkdirs();
+	        }
+	        
+	        Set<String> idNumRepeatCheckSet = new HashSet<>();
+	        int index=1;
+			while(imageQueue.size() > 0){
+				File srcFile = imageQueue.poll();
+				FileInputStream fis = new FileInputStream(srcFile);
+				String idNum = IdCardNumberGenerator.generate();
+//				String idNum = index+"";
+				if(!idNumRepeatCheckSet.contains(idNum)){
+					idNumRepeatCheckSet.add(idNum);
+				}else{
+					idNum = IdCardNumberGenerator.generate();
+				}
+//		        String desImageEleName = desImageDirPath + "changeTest-"+ChineseNameGenerator.getChineseName().trim()+" "+idNum+".jpg";
+		        String srcFileNameTemp = srcFile.getName();
+		        String srcFileName = srcFileNameTemp.split("\\.")[0].trim();
+//		        String srcFileName = keyWord+"_"+index;
+		        String desImageEleName = desImageDirPath + srcFileName+" "+idNum+".jpg";
+		        System.out.println(desImageEleName);
+		        File desImageEleFile = new File(desImageEleName);
+		        OutputStream os = new FileOutputStream(desImageEleFile);
+	            int bytesRead = 0;
+	            byte[] buffer = new byte[1024];
+	            while ((bytesRead = fis.read(buffer, 0, buffer.length)) != -1) {
+	                os.write(buffer, 0, bytesRead);
+	            }
+	            os.close();
+	            fis.close();
+	            index +=1;
+			}
+			System.out.println(idNumRepeatCheckSet.size());
+			
+		}
+	}
+	
+	
+
+}
