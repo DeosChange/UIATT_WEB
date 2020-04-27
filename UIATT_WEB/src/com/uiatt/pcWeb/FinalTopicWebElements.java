@@ -16,10 +16,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
-
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class FinalTopicWebElements {
-	public static Logger logger = Logger.getLogger(FinalTopicWebElements.class );
 	// 正在热议的第一篇话题
 	@FindBy(xpath = FinalTopicPageElements.FIRST_TOPIC)
 	public static WebElement first_topic;
