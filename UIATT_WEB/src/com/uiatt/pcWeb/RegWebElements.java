@@ -24,9 +24,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class RegWebElements {
-	public static Logger logger = Logger.getLogger(RegWebElements.class );
 	// 注册用户名按钮
 	@FindBy(xpath = RegPageElements.REG_USERNAME)
 	public static WebElement reg_username;
