@@ -27,9 +27,9 @@ import com.uiatt.util.Utils;
  * 个人中心页面
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class PersonHomeWebElements {
-	public static Logger logger = Logger.getLogger(PersonHomeWebElements.class );
 	//个人中心页“已发布的xx”中的第一条，可由此来验证刚发布的资源的标题是否正确
 	@FindBy(xpath = PersonHomePageElements.FIRST_NEWS_TITLE)
 	public static WebElement first_news_title;
