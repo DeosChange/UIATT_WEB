@@ -24,9 +24,9 @@ import com.uiatt.util.Utils;
  * 登陆成功后跳转的页面，此页面是登陆成功后所有操作的源头类，包括登出等都在此页面进行；
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class IndexWebElements {
-	public static Logger logger = Logger.getLogger(IndexPageElements.class );
 	// 会员登录后右上角的用户名按钮
 	@FindBy(xpath = IndexPageElements.USERNAME_BTN)
 	public static WebElement username_btn;
