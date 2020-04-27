@@ -27,9 +27,9 @@ import com.uiatt.util.Utils;
  * 点击聊话题后弹出的编辑窗体的所有元素；
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class PublishTopicWebElements {
-	public static Logger logger = Logger.getLogger(PublishTopicWebElements.class );
 	//话题类型
 	@FindBy(xpath = PublishTopicPageElements.TOPIC_TYPE_FIRST)
 	public static WebElement topic_type_first;
