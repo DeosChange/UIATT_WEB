@@ -40,6 +40,13 @@
 	    </testng>
 	</target>
 	
+	<target name="before" depends="test">
+	    <testng outputdir="test-output" classpathref="runpath" delegateCommandSystemProperties="true">
+	    	<jvmarg value="-Dfile.encoding=UTF-8"/>
+	        <xmlfileset dir="${src.dir}" includes="${testng.file}"/>
+	    </testng>
+	</target>
+	
 	<target name="generateReport" depends="test">
 		 <delete dir="${basedir}/testng-xslt">
 		 </delete>
