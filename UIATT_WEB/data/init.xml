@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--PC启动配置参数-->
 <infos>
-	<capabilities>
-		
+	<capabilities>	
 	    <chromeDriverName>webdriver.chrome.driver</chromeDriverName>
 	     <!-- 
 	    <chromeDriverName>webdriver.firefox.bin</chromeDriverName>
 	    -->
-	    
 	    <chromeDriverPath>C:\\Users\\lifec\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe</chromeDriverPath>
-	    
 	    <!-- 
 	    <chromeDriverPath>C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe</chromeDriverPath>
 	     -->
 	    <!-- 
 	    <chromeDriverPath>D:\\Program Files\\Mozilla Firefox\\firefox.exe</chromeDriverPath>
 	    --> 
-	    
 	    <log4jConfigPath>/src/log4j.properties</log4jConfigPath>
 	    <loginUrl>http://www.uiattweb.cn</loginUrl>
 	    <LoginWebElements>com.uiatt.pcWeb.LoginWebElements</LoginWebElements>
@@ -61,12 +57,7 @@
 		<!-- 修改病例信息 ：修改标题、年龄-->
 		<SICKCASE_UPDATE_TITLE>左下肢正型手术病例</SICKCASE_UPDATE_TITLE>
 	    <SICK__UPDATE_AGE>55</SICK__UPDATE_AGE>
-	    
-	    <!-- 评论病例-->
-	    <SICK_COMMENT_TEXT>这是个典型病例，分享的真好，受益匪浅！</SICK_COMMENT_TEXT>
-	    <SICK_COMMENTPHO_PATH>\\script\\upSickCaseCommentPhoto.exe</SICK_COMMENTPHO_PATH>
-	    <SICK_COMMENT_REMIND_INPUT>z</SICK_COMMENT_REMIND_INPUT>
-	    
+	  
 	    <!-- 修改头像 -->
 	    <OLDHEADPHOTO>\\script\\upOldHeadPortraitPhoto.exe</OLDHEADPHOTO>
 	    <NEWHEADPHOTO>\\script\\upNewHeadPortraitPhoto.exe</NEWHEADPHOTO>
