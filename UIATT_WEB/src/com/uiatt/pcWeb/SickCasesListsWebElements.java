@@ -12,9 +12,9 @@ import com.uiatt.pcPage.SickCasesListsPageElements;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class SickCasesListsWebElements {
-	public static Logger logger = Logger.getLogger(SickCasesListsWebElements.class );
 	//“最多评论”项
 	@FindBy(xpath = SickCasesListsPageElements.MOST_COMMENT)
 	public static WebElement most_comment;
