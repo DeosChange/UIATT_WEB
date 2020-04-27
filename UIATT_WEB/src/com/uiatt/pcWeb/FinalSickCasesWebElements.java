@@ -15,9 +15,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class FinalSickCasesWebElements {
-	public static Logger logger = Logger.getLogger(FinalSickCasesWebElements.class );
 	// 正在热议的第一条病例
 	@FindBy(xpath = FinalSickCasesPageElements.FIRST_CASE)
 	public static WebElement first_case;
