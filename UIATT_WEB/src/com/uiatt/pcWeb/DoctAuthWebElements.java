@@ -16,9 +16,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class DoctAuthWebElements {
-	public static Logger logger = Logger.getLogger(DoctAuthWebElements.class );
 	// 姓
 	@FindBy(xpath = DoctAuthPageElements.AUTH_LASTNAME)
 	public static WebElement auth_lastname;
