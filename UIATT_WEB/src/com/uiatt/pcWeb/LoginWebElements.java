@@ -18,9 +18,9 @@ import com.uiatt.util.BaseTest;
  * author : Change
  * 
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class LoginWebElements {
-		public static Logger logger = Logger.getLogger(LoginWebElements.class );
 		// 会员登录按钮
 		@FindBy(xpath = LoginPageElements.LOGIN_uiatt_BTN)
 		public static WebElement login_uiatt_btn;
