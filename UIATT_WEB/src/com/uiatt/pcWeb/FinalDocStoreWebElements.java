@@ -16,10 +16,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
-
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class FinalDocStoreWebElements {
-	public static Logger logger = Logger.getLogger(FinalDocStoreWebElements.class );
 	// 推荐指南中的第一篇文章
 	@FindBy(xpath = FinalDocStorePageElements.FIRST_DOCUMENT)
 	public static WebElement first_document;
