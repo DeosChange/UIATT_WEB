@@ -17,10 +17,9 @@ import com.uiatt.util.Utils;
  * author : Change
  * 
  * */
-
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class OneTopicWebElements {
-	public static Logger logger = Logger.getLogger(OneTopicWebElements.class );
 	// 未登录查看话题详情，提示立即登录
 	@FindBy(xpath = OneTopicPageElements.LOGIN_NOW)
 	public static WebElement login_now;
