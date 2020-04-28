@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class LoginNowPageElements {
+public class LoginNowPageElements extends BaseElements{
 	//默认的会员登录用户名
 	public static final String ALLIN_USERNAME = ".//input[@name='email']";
 	
