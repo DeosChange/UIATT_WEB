@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class FinalSickCasesPageElements {
+public class FinalSickCasesPageElements extends BaseElements{
 	//正在热议的第一条病例
 	public static final String FIRST_CASE = ".//ul[@class='v_l_list']/li[1]/div[2]/div[1]/a";
 	
