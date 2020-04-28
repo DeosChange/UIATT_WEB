@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * author:Change
  * */
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class IndexPageElements {
+public class IndexPageElements extends BaseElements{
 	// 你的首页
 	public static final String YOUR_HOMEPAGE = ".//div[@class='p_home_b']";
 	
