@@ -12,7 +12,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class LoginPageElements {
+public class LoginPageElements extends BaseElements{
 	// 会员登录按钮
 	public static final String LOGIN_uiatt_BTN = ".//*[@id='allinLogin']/div[1]/div[1]";
 		
