@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class OneDocmentPageElements {
+public class OneDocmentPageElements extends BaseElements{
 	//未登录查看文库详情，提示立即登录
 	//public static final String LOGIN_NOW = ".//img[@class='login_mask']";
 	public static final String LOGIN_NOW = ".//div[@class='mask_text_but']/a/img";
