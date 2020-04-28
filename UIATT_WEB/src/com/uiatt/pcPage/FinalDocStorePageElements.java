@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class FinalDocStorePageElements {
+public class FinalDocStorePageElements extends BaseElements{
 	//推荐指南中的第一篇文章
 	public static final String FIRST_DOCUMENT = ".//div[@class='doc_fl_list']/ul/li[1]/div[2]/a";
 	
