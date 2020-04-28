@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 
 
 
-public class KawEventPage {
+public class KawEventPage extends BaseElements{
 	private static final Logger logger = LoggerFactory.getLogger(KawEventPage.class);
 	static Queue<String> deviceUuidQueue = new LinkedList<>();
 	static Queue<String> personUuidQueue = new LinkedList<>();
