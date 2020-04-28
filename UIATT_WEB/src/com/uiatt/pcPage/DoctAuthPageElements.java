@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class DoctAuthPageElements {
+public class DoctAuthPageElements extends BaseElements{
 	// 姓
 	public static final String AUTH_LASTNAME = ".//input[@name='lastName']";
 	//public static final String AUTH_LASTNAME = ".//*[@id='renzhengForm']/div[1]/div[2]/div[1]/input";
