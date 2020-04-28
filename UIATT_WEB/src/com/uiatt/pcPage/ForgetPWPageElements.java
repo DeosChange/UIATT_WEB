@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
  * */
 
 @Listeners({com.uiatt.listener.AssertionListener.class})
-public class ForgetPWPageElements {
+public class ForgetPWPageElements extends BaseElements{
 	// 忘记密码的邮箱或手机
 	public static final String RESET_USNAME = ".//*[@id='account']";
 	
