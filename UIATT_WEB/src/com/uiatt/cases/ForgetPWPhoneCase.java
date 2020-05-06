@@ -20,10 +20,10 @@ import com.uiatt.util.BaseTest;
  * 2.0PC邮箱账户忘记密码重置密码测试用例
  * author:Change
  * */
+@Log4j2
 @Listeners({com.uiatt.listener.AssertionListener.class})
 public class ForgetPWPhoneCase {
 	public static WebDriver driver;
-	public static Logger logger = Logger.getLogger(ForgetPWPhoneCase.class );
 	
 	public ForgetPWPhoneCase(){
 		//将基类中初始化的driver值传回本类，这样tearDown()方法的driver就能取到基类中初始化的值了；
