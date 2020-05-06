@@ -1,0 +1,29 @@
+package com.uiatt.cases;
+
+import lombok.extern.slf4j.Slf4j;
+import org.testng.annotations.Test;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
+@Slf4j
+public class SomeUtils {
+
+    @Test
+    public String getDBBase64PWD(String orignPWD){
+        String base64PWD = StringFactory.base64Encode(orignPWD);
+        log.info(base64PWD);
+        return base64PWD;
+    }
+
+    @Test
+    public void convert2UtcTime() throws ParseException {
+        SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date t = df1.parse("2019-12-02 09:57:47");
+        System.out.println(df1.format(t));
+        df1.setTimeZone(TimeZone.getTimeZone("UTC"));
+        System.out.println(df1.format(t));
+    }
+}
