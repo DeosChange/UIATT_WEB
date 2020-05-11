@@ -1,0 +1,121 @@
+package com.uiatt.cases;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.List;
+import java.util.Queue;
+
+import config.Constant;
+import demo.RedisAssertMysqlToRedisInitData;
+import demo.RedisClusterAssertMysqlToRedisInitData;
+import demo.RedisClusterIncreatmentAssertMysqlToRedisInitData;
+import demo.RedisClusterTestUpdate;
+import demo.RedisTestUpdate;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisCluster;
+import utils.RedisClusterUtil;
+import utils.RedisUtil;
+
+public class RedisFastTest {
+	public static void test(String[] args,OutputStream outputStream) throws IOException {
+		//判断redis 类型
+		String redis_type = args[0];
+		String standlone_ip = args[1];
+		String cluster_ipsStr = args[2];
+		String test_type = args[3];
+		String check_type = args[4];
+		String clusterCompareToMysqlEtl_increment_params = args[5];
+		String person_uuid = args[6];
+		String image_uuid = args[7];
+		String group_uuid = args[8];
+		String device_uuid = args[9];
+		String device_sn = args[10];
+		String policy_uuid = args[11];
+		String GateQueryTrigger = args[12];
+		if("standlone".equals(redis_type)){
+			if("standloneCompareToMysqlEtl".equals(test_type)){
+//				RedisAssertMysqlToRedisInitData.standloneCompareToMysqlEtl(standlone_ip,outputStream);
+			}
+			if("person".equals(check_type)){
+//				RedisTestUpdate.test("person", outputStream,standlone_ip,person_uuid,image_uuid);
+			}
+			if("group".equals(check_type)){
+//				RedisTestUpdate.test("group", outputStream,standlone_ip,group_uuid);
+			}
+			if("device".equals(check_type)){
+//				RedisTestUpdate.test("device", outputStream,standlone_ip,device_uuid,device_sn);
+			}
+			if("policy".equals(check_type)){
+//				RedisTestUpdate.test("policy",outputStream, standlone_ip,policy_uuid);
+			}
+			if("GateQueryTrigger".equals(check_type)){
+				String[] paramArray = GateQueryTrigger.split(",");
+				if(paramArray.length == 3){
+//					RedisTestUpdate.test("GateQueryTrigger", outputStream,standlone_ip,paramArray[0],paramArray[1],paramArray[2]);
+				}else if(paramArray.length == 2){
+//					RedisTestUpdate.test("GateQueryTrigger", outputStream,standlone_ip,paramArray[0],paramArray[1]);
+				}
+			}
+		}else if("cluster".equals(redis_type)){
+			if("clusterCompareToMysqlEtl".equals(test_type)){
+//				RedisClusterAssertMysqlToRedisInitData.clusterCompareToMysqlEtl(cluster_ipsStr, outputStream);
+			}
+			if("flushCluster".equals(test_type)){
+//				new RedisClusterUtils().flushDBForCluster(new RedisClusterUtils().initJedisCluster(cluster_ipsStr), outputStream);
+			}
+			if("clusterCompareToMysqlEtlIncrement".equals(test_type)){
+//				RedisClusterIncreatmentAssertMysqlToRedisInitData.start(cluster_ipsStr,clusterCompareToMysqlEtl_increment_params, outputStream);
+			}
+			if("person".equals(check_type)){
+//				RedisClusterTestUpdate.test("person", outputStream, cluster_ipsStr,person_uuid,image_uuid);
+			}
+			if("group".equals(check_type)){
+//				RedisClusterTestUpdate.test("group", outputStream, cluster_ipsStr,group_uuid);
+			}
+			if("device".equals(check_type)){
+//				RedisClusterTestUpdate.test("device", outputStream, cluster_ipsStr,device_uuid,device_sn);
+			}
+			if("policy".equals(check_type)){
+//				RedisClusterTestUpdate.test("policy", outputStream, cluster_ipsStr,policy_uuid);
+			}
+			if("GateQueryTrigger".equals(check_type)){
+				String[] paramArray = GateQueryTrigger.split(",");
+				if(paramArray.length == 3){
+//					RedisClusterTestUpdate.test("GateQueryTrigger", outputStream, cluster_ipsStr,paramArray[0],paramArray[1],paramArray[2]);
+				}else if(paramArray.length == 2){
+//					RedisClusterTestUpdate.test("GateQueryTrigger", outputStream, cluster_ipsStr,paramArray[0],paramArray[1]);
+				}
+			}
+		}
+	}
+
+	public static void fastTest(List<String> baseParamList,Queue<String> keyTypeParamQueue,BufferedWriter bWriter) throws IOException{
+		String redisType = baseParamList.get(0);
+		String ipStr = baseParamList.get(1);
+		String testType = baseParamList.get(2);
+		String increDate = baseParamList.get(3);
+		String keyId = baseParamList.get(4);
+		if(Constant.REDIS_TYPE_STANDALONE.equals(redisType)){
+			Jedis jedis = new RedisUtil().getJedis(ipStr,bWriter);
+			if(Constant.TEST_TYPE_STANDALONE_MYSQL_ETL_COMPARE.equals(testType)){
+				RedisAssertMysqlToRedisInitData.standloneCompareToMysqlEtl(jedis,bWriter);
+			}else if(Constant.TEST_TYPE_FAST_TEST.equals(testType)){
+				new RedisTestUpdate().fastTest(jedis, keyTypeParamQueue, keyId, bWriter);
+			}
+		}else if(Constant.REDIS_TYPE_CLUSTER.equals(redisType)){
+			JedisCluster jedisCluster = new RedisClusterUtil().initJedisCluster(ipStr);
+			if(Constant.TEST_TYPE_CLUSTER_MYSQL_ETL_COMPARE.equals(testType)){
+				RedisClusterAssertMysqlToRedisInitData.clusterCompareToMysqlEtl(jedisCluster, bWriter);
+			}else if(Constant.TEST_TYPE_CLUSTER_MYSQL_ETL_INCRE_COMPARE.equals(testType)){
+				RedisClusterIncreatmentAssertMysqlToRedisInitData.test(jedisCluster,increDate, bWriter);
+			}else if(Constant.TEST_TYPE_FLUSH_CLUSTER.equals(testType)){
+				new RedisClusterUtil().flushDBForCluster(jedisCluster,bWriter);
+			}else if(Constant.TEST_TYPE_FAST_TEST.equals(testType)){
+				new RedisClusterTestUpdate().fastTest(jedisCluster, keyTypeParamQueue, keyId, bWriter);
+			}else if(Constant.TEST_TYPE_LIST_ITEMS.equals(testType)){
+				new RedisClusterTestUpdate().listItemsTest(jedisCluster, keyTypeParamQueue, bWriter);
+			}
+		}
+	}
+}
