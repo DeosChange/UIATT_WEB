@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 @Slf4j
-public class SomeUtils {
+public class SomeTest {
 
     @Test
     public String getDBBase64PWD(String orignPWD){
