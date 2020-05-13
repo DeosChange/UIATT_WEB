@@ -1,0 +1,353 @@
+package demo;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
+
+import com.alibaba.fastjson.JSONObject;
+
+import config.Constant;
+import io.netty.util.internal.StringUtil;
+import redis.clients.jedis.Jedis;
+import utils.RedisClusterUtil;
+import utils.RedisUtil;
+
+public class RedisTestUpdate {
+
+	public static void test(Jedis jedis,String type,OutputStream outputStream,String ip,String ... args){
+		try{
+			Set<String> blackListSet = new HashSet<>();
+			Set<String> keys = jedis.keys("*");
+			Iterator<String> it = keys.iterator();
+			while (it.hasNext()) {
+				String key = it.next();
+				if(key.startsWith("QueryTrigger")){
+					blackListSet.add(key);
+//					jedisCluster.del(key);
+					String[] keyArray = key.split(":");
+					if(keyArray.length == 4 ){
+						String policyId = keyArray[1].trim();
+						String personId = keyArray[2].trim();
+						String date = keyArray[3].trim();
+						if(args[0].equals(policyId)){
+							if(args[1].equals(personId)){
+								if(args[2].equals(date)){
+									System.err.println("===========================");
+									System.out.println("QueryTrigger hash >>> ");
+									outputStream.write((("===========================")+"\n").getBytes());
+									outputStream.write((("QueryTrigger hash >>> ")+"\n").getBytes());
+									Map<String, String> map = jedis.hgetAll(key);
+									for(String mkey : map.keySet()){
+										String vString = map.get(mkey);
+										System.out.println(mkey+":"+vString);
+										outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+									}
+								}
+							}
+						}
+					}else if(keyArray.length == 3 ){
+						String policyId = keyArray[1].trim();
+						String date = keyArray[2].trim();
+						if(args[0].equals(policyId)){
+							if(args[1].equals(date)){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("QueryTrigger set >>>  "+ele);
+									outputStream.write((("QueryTrigger set >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}
+					}else{
+						continue;
+					}
+				}else{
+					String[] keyArray = key.split(":");
+					if(keyArray.length <2 ){
+						continue;
+					}
+//					System.out.println(key);
+					String expKey = key.split(":")[0];
+//					System.out.println(key);
+					String value = key.split(":")[1];
+					if("person".equals(type)){
+						if (expKey.equals("Image")) {
+							if(value.equals(args[1])){
+								System.err.println("===========================");
+								System.out.println("Image url >>> "+jedis.get(key));
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("Image url >>> "+jedis.get(key))+"\n").getBytes());
+							}
+						}else if (expKey.equals("Person")) {
+							if(value.equals(args[0])){
+//								List<String> list = jedis.hvals(key);
+//								for(String ele : list){
+//									System.out.println("person info : "+ele);
+//								}
+								System.err.println("===========================");
+								System.out.println("person info >>>  ");
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("person info >>>  ")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("Person_to_Group")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Person_to_Group info >>>  "+ele);
+									outputStream.write((("Person_to_Group info >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("PersonLastModTs")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								String lastModTs = jedis.get(key);
+								System.out.println("PersonLastModTs >>> "+lastModTs);
+								outputStream.write((("PersonLastModTs >>> "+lastModTs)+"\n").getBytes());
+							}
+						}else if (expKey.equals("PersonString")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								System.out.println("personString >>>  ");
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("personString >>>  ")+"\n").getBytes());
+								String personString = jedis.get(key);
+								JSONObject pJsonObject = JSONObject.parseObject(personString);
+								for(String keyStr : pJsonObject.keySet()){
+									System.out.println(keyStr+":"+pJsonObject.getString(keyStr));
+									outputStream.write(((keyStr+":"+pJsonObject.getString(keyStr))+"\n").getBytes());
+								}
+//								System.out.println("personString : "+personString);
+							}
+						}else if (expKey.equals("Person_to_Group_String")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								String Person_to_Group_String = jedis.get(key);
+								System.out.println("Person_to_Group_String >>> "+Person_to_Group_String);
+								outputStream.write((("Person_to_Group_String >>> "+Person_to_Group_String)+"\n").getBytes());
+							}
+						}
+					}else if("group".equals(type)){
+						if (expKey.equals("GroupInfo")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								System.out.println("GroupInfo >>> ");
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("GroupInfo >>> ")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("GroupMember")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("GroupMember >>>  "+ele);
+									outputStream.write((("GroupMember >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("Group_to_Policy")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Group_to_Policy >>>  "+ele);
+									outputStream.write((("Group_to_Policy >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}
+					}else if("device".equals(type)){
+						if (expKey.equals("DeviceSn")) {
+							if(args[1].equals(value)){
+								System.err.println("===========================");
+								System.out.println("DeviceSn did >>> "+jedis.get(key));
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("DeviceSn did >>> "+jedis.get(key))+"\n").getBytes());
+							}
+						} else if (expKey.equals("Device")) {
+							if(args[0].equals(value)){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						} else if (expKey.equals("Device_to_Policy")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Device_to_Policy >>>  "+ele);
+									outputStream.write((("Device_to_Policy >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}
+					}else if("policy".equals(type)){
+						if (expKey.equals("Policy")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}
+					}else if("policyDeviceDeviceSnGroupPerson".equals(type)){
+						if (expKey.equals("Policy")) {
+							if(value.equals(args[0])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("DeviceSn")) {
+							if(args[2].equals(value)){
+								System.err.println("===========================");
+								System.out.println("DeviceSn did >>>  "+jedis.get(key));
+								outputStream.write((("===========================")+"\n").getBytes());
+								outputStream.write((("DeviceSn did >>>  "+jedis.get(key))+"\n").getBytes());
+							}
+						} else if (expKey.equals("Device")) {
+							if(args[1].equals(value)){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						} else if (expKey.equals("Device_to_Policy")) {
+							if(value.equals(args[1])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Device_to_Policy >>> "+ele);
+									outputStream.write((("Device_to_Policy >>> "+ele)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("GroupInfo")) {
+							if(value.equals(args[3])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("GroupMember")) {
+							if(value.equals(args[3])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("GroupMember >>>  "+ele);
+									outputStream.write((("GroupMember >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("Group_to_Policy")) {
+							if(value.equals(args[3])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Group_to_Policy >>>  "+ele);
+									outputStream.write((("Group_to_Policy >>>  "+ele)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("Person")) {
+							if(value.equals(args[4])){
+//								List<String> list = jedis.hvals(key);
+//								for(String ele : list){
+//									System.out.println("person info : "+ele);
+//								}
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Map<String, String> map = jedis.hgetAll(key);
+								for(String mkey : map.keySet()){
+									String vString = map.get(mkey);
+									System.out.println(mkey+":"+vString);
+									outputStream.write(((mkey+":"+vString)+"\n").getBytes());
+								}
+							}
+						}else if (expKey.equals("Person_to_Group")) {
+							if(value.equals(args[4])){
+								System.err.println("===========================");
+								outputStream.write((("===========================")+"\n").getBytes());
+								Set<String> set = jedis.smembers(key);
+								for(String ele : set){
+									System.out.println("Person_to_Group info >>> "+ele);
+									outputStream.write((("Person_to_Group info >>> "+ele)+"\n").getBytes());
+								}
+							}
+						}
+					}
+				}
+			}
+			System.out.println(blackListSet.size());
+			outputStream.write(((blackListSet.size())+"\n").getBytes());
+			for(String ele:blackListSet){
+//				System.out.println(ele);
+			}
+		}catch(Exception e){
+//			log.error(e.toString());
+			try {
+				outputStream.write(((e.toString())+"\n").getBytes());
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+			e.printStackTrace();
+		}
+	}
+ 
+	public void fastTest(Jedis jedis,Queue<String> keyTypeParamQueue,String keyId,BufferedWriter bWriter) throws IOException {	
+		while(keyTypeParamQueue.size()>0){
+			String keyType = keyTypeParamQueue.poll();
+			if(!keyType.startsWith("qx")){
+				String expectedKey = keyType+":"+keyId;
+				String valueType = jedis.type(expectedKey);
+				if(StringUtil.isNullOrEmpty(valueType)||"none".equals(valueType)){
+	    			bWriter.write("no data found of the key:"+expectedKey+"<br>");
+	    		}else{
+	    			new RedisUtil().printValue(jedis, expectedKey, valueType, bWriter);
+	    		}
+			}
+		}
+	}
+}
