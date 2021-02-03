@@ -17,7 +17,7 @@ public class JsonAssertListener {
 		String obj1 = "{\"age\":23,\"name\":\"change\",\"message\":[\"mes1\",\"mes2\",\"mes3\"]}";
     String obj2 = "{\"name\":\"change\",\"age\":23,\"message\":[\"mes2\",\"mes3\",\"mes1\"]}";
 		List<String> ignoreKeyList = Arrays.asList("similarity","ip");
-        jsonEqualAssert(obj1, obj2,ignoreKeyList);
+        //jsonEqualAssert(obj1, obj2,ignoreKeyList);
 	}
 	
 	/**
