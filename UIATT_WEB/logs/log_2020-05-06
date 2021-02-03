@@ -778,4 +778,4 @@ uiattLoginPhone Failure
 [INFO ] 2020-05-06 17:57:58,801 method:com.uiatt.listener.ScreenShotPC.screenShot(Unknown Source)
 通过监听成功保存异常截图:D:\MarsWorkspace\uiatt1\screenshot\2015-11-29-17-57-58.png
 [INFO ] 2020-05-06 17:57:58,802 method:com.uiatt.listener.ScreenShotPC.onTestSkipped(Unknown Source)
-logout Skipped
+logout Skipped Success
