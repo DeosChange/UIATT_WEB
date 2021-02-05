@@ -72,7 +72,7 @@ public class AssertionListener extends TestListenerAdapter {
         for (StackTraceElement stackTraceElement : stackTraceElements) {           
             if(stackTraceElement.getClassName().equals(tr.getTestClass().getName())){               
                 ets.add(stackTraceElement);
-                index = stackTraceElement.getLineNumber();
+                //index = stackTraceElement.getLineNumber();
             }
         }
         StackTraceElement[] et = new StackTraceElement[ets.size()];
