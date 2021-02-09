@@ -30,7 +30,7 @@ public class Assertion {
         } catch (Error e){
             errors.add(e);
             //并记录日志
-            logger.error(e);
+           // logger.error(e);
             Reporter.log("[ERROR]"+e);;
             flag = false;
             Assert.fail(e.toString());
