@@ -53,7 +53,7 @@ public class ScreenshotListener extends TestListenerAdapter{
 	@Override
 	public void onFinish(ITestContext testContext) {
 		super.onFinish(testContext);
-
+		logger.info(tr.getName() + " Finished");
 	}
 	/**
 	 * 自动截图，保存图片到本地以及html结果文件中
