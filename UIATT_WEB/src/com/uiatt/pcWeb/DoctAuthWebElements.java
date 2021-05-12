@@ -125,6 +125,7 @@ public class DoctAuthWebElements {
 
 	//判断"暂不认证"按钮是否存在
     public static boolean authSkipBtnIsExist() {
+	BaseTest.logConf();
     	return Utils.isElementExist(driver, By.xpath(DoctAuthPageElements.AUTH_SKIP_BTN));
     }
     
