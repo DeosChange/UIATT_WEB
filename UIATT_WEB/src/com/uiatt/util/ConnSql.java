@@ -73,6 +73,7 @@ public class ConnSql {
 		connSql("jdbc:mysql://127.0.0.1:3306/uiatt_platform", "manager_conn", "changetest"); 
 //		selectSql("py_books", "filename", "temp", "filepath");
 		deleteSql("py_books", "filename", "temp");
+		System.out.println("数据库连接失败" + e.getMessage());
 	}
 	
 }
