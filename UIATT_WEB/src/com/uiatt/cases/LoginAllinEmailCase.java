@@ -22,12 +22,12 @@ import com.uiatt.util.BaseTest;
 public class LoginAllinEmailCase {
 	public static WebDriver driver;
 	
-	/**
+	
 	public LoginAllinEmailCase(){
 		//将基类中初始化的driver值传回本类，这样tearDown()方法的driver就能取到基类中初始化的值了；
 		LoginAllinEmailCase.driver=BaseTest.chromeInit(driver);
 	}
-	*/
+	
 	
 	@BeforeClass
 	public void setUp() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
