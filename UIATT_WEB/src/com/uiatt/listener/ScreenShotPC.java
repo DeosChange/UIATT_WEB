@@ -94,7 +94,7 @@ public class ScreenShotPC extends TestListenerAdapter{
 	    				Reporter.log("成功保存异常截图:" + screenshotPath);
 	    				Reporter.log(reportPhotoPath);
 	    		} catch (IOException | SessionNotFoundException e) {
-	    				logger.error("保存异常截图失败！");
+	    				logger.error("保存异常截图失败！！");
 	    				Reporter.log("[ERROR]保存异常截图失败！");
 	    				e.printStackTrace();
 	    		} 
@@ -137,7 +137,7 @@ public class ScreenShotPC extends TestListenerAdapter{
 	    				//Reporter.log("通过监听成功保存异常截图:" + screenshotPath);
 	    				//Reporter.log(reportPhotoPath);
 	    		} catch (IOException | SessionNotFoundException e) {
-	    				logger.error("通过监听保存异常截图失败！");
+	    				logger.error("通过监听保存异常截图失败！！");
 	    				Reporter.log("[ERROR]通过监听保存异常截图失败！");
 	    				e.printStackTrace();
 	    		} 
