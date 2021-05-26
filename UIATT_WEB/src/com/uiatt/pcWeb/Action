@@ -14,7 +14,7 @@ public class Action {
 				break;
 			}
 			String resultData = HttpUtils.request(sevenBitNumber, actionName, env,operatorTag,null,null);
-//			System.out.println(personUuid);
+			System.out.println(personUuid);
 			resultDataList.add(resultData);
 		}
 		String fileName = actionName;
