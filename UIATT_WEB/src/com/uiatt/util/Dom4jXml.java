@@ -52,6 +52,7 @@ public class Dom4jXml {
      */
     public static String getValue(String key) {        
     	Map<String, String> init = Dom4jXml.parserXml("\\data\\init.xml");
+	System.out.println(key);
     	return init.get(key);
     }  
 }
