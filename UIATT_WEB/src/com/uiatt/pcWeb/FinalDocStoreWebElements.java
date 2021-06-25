@@ -34,7 +34,9 @@ public class FinalDocStoreWebElements {
 	
 	//判断推荐指南中的第一篇文章是否找到
 	public static boolean firstDocumentIsExist() {
-    	return Utils.isElementExist(driver, By.xpath(FinalDocStorePageElements.FIRST_DOCUMENT));
+		logger.info("find the first ele");
+    		return Utils.isElementExist(driver, By.xpath(FinalDocStorePageElements.FIRST_DOCUMENT)
+	);
     }
 
 }
