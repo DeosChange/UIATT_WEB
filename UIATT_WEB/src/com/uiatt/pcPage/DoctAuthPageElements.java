@@ -85,5 +85,6 @@ public class DoctAuthPageElements extends BaseElements{
 	// 暂不认证按钮
 	public static final String AUTH_SKIP_BTN = ".//*[@id='renzhengForm']/div[9]";
 	
+	public static final String AUTH_SKIP_BTN_1 = ".//*[@id='renzhengForm']/div[8]";
 	
 }
