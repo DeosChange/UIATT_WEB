@@ -63,6 +63,7 @@ public class LoginAllinPhoneCase {
 	 */
 	@Test (priority = 3,dependsOnMethods = { "allinLoginPhone" })
 	public void logout(){
+		Reporter.log("==========");
 		IndexWebElements.allinLogout();
 	}
 }
