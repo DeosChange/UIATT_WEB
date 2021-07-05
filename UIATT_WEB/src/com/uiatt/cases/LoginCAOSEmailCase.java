@@ -54,6 +54,7 @@ public class LoginCAOSEmailCase {
 	@Test (priority = 2,dependsOnMethods = { "assertRegButton" })
 	@Parameters({"LOGIN_CAOS_EMAIL_USER", "GLOBAL_PASSWORD"})
 	public void caosloginEmail(String LOGIN_CAOS_EMAIL_USER, String GLOBAL_PASSWORD) {
+		System.out.println("login email");
 		LoginWebElements.caosLogin(LOGIN_CAOS_EMAIL_USER, GLOBAL_PASSWORD);
 	}
 	
